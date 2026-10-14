@@ -5,7 +5,9 @@ __pycache__/
 *.pyc
 .env
 .claude/
-src/data/
+src/data/*
+!src/data/eval_qa_set.json
+!src/data/metadata.json
 exp_embed_tok/out/
 *.npy
 *.pkl

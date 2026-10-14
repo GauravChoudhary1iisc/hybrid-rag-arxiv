@@ -1,0 +1,794 @@
+[
+  {
+    "id": 0,
+    "question": "What type of patient entities are included in the Diabetes diagnosis cohort according to the Graph RAG system?",
+    "ground_truth": "Patient entities actively recorded under the Diabetes diagnosis category.",
+    "reference_context": "which other patient cases in the\ncurrent database are grouped under the same\nDiabetes diagnosis cohort?\nResponse (from Graph RAG system):\nCohort Analysis (Diagnosis: Diabetes):\nThe following patient entities are actively\nrecorded under this diagnosis category:\nRound 3 Query: Could you retrieve the spe-\ncific clinical logistics, facility units, or formu-\nlary drug classifications linked to the admission\nrecord Prescription_472?\nResponse (from Graph RAG system):\nPrescription_472:\nExample:\nRound 1 Query:\nResponse:\nRound 2 Query:\nResponse:\nRound 3 Query:\n\"For Episode_91 (AFib), what treatments were\nResponse:\nRound 4 Query:\nResponse:\nWarfarin,5mg,daily,2021-03-13,2021-06-13\nBeta_blocker,50mg,bid,2021-03-13,2021-04-15",
+    "arxiv_id": "2605.28645v1",
+    "title": "GraphSteal: Structural Knowledge Stealing from Graph RAG via Traversal Reconstruction",
+    "chunk_id": 26341
+  },
+  {
+    "id": 1,
+    "question": "What method was used to measure customer satisfaction scores?",
+    "ground_truth": "The passage does not provide specific details on how customer satisfaction scores were measured.",
+    "reference_context": "led by CTO Maria Chen and had been in\ndevelopment since Q3 2021.\nHighlights:\nMonthly active users surged from 175,000 to over 210,000\n- Customer satisfaction scores reached an all-time high -\nThe recommendation accuracy improved to 94.7\nThis achievement represents 18 months of dedicated work by\nthe Helios team. Special thanks to the engineering leads:\nJames Wright, Sarah Kim, and David Okonkwo.\nBest regards, Maria Chen CTO, Nexora Technologies\nThe following product specification is representa-\ntive of the 30 distractor documents in the corpus\u2014\ntopically related to the company but irrelevant to\nthe changepoint:\nProduct: CloudVault Version: 3.5.3 Last Updated: 2023-07-25\nOverview:\nCloudVault provides enterprise-grade solutions\nfor data management.\nTechnical Requirements: - Python 3.8+ - 8GB RAM minimum -\nDependencies: - PostgreSQL 13+ - Redis 6+ - Kubernetes 1.20+",
+    "arxiv_id": "2601.02957v3",
+    "title": "LLM-Augmented Changepoint Detection: A Framework for Ensemble Detection and Automated Explanation",
+    "chunk_id": 10686
+  },
+  {
+    "id": 2,
+    "question": "What is the reason for the difference in the number of source papers used by the baseline and the claim network?",
+    "ground_truth": "The baseline report cites material from 6 chunks-source papers, while the claim network uses material pre-stratified by reception polarity, drawing from a different filtering mechanism that includes externally-authored evaluative material.",
+    "reference_context": "arrive\npre-stratified by reception polarity.\nSource diversity.\nmaterial from 9 distinct citing papers; the baseline\nreport cites material from 6 chunks-source papers,\nof which one is the target itself. The gap is not\na property of the source corpus \u2014 both systems\ndraw on the same 127-paper network \u2014 but of the\nretrieval mechanism: the claim network filters at\nextraction time for externally-authored evaluative\nmaterial, whereas chunk retrieval surfaces what-\never is lexically near the query, including the target\npaper\u2019s own text. The \u00a74.2 Source Diversity verdict\n(win rate 0.750) is the rubric expression of this gap.\nThe five properties above are concrete instances\nof the general \u00a74.2 argument that the gain from\ntyped reference structure is the gain from having\nthe right intermediate representation; they should\nbe read in conjunction with the dimension-level\nrubric verdicts of Table 8 and the three-run break-\ndown of Appendix I.",
+    "arxiv_id": "2605.30966v1",
+    "title": "Reading Between the Citations: A Typed Claim Network for Scientific Literature",
+    "chunk_id": 26770
+  },
+  {
+    "id": 3,
+    "question": "What chunk sizes were used for the RecursiveTokenChunker in the comparisons shown in Tables 27 to 30?",
+    "ground_truth": "(200, 0), (400, 0), (400, 200), (800, 400)",
+    "reference_context": "for FixedTokenChunker (800, 400).\nTable 27: Comparison of deduplication and filtering strategies on webfaq for RecursiveTokenChunker (200, 0).\nReducing Redundancy in Retrieval-Augmented Generation through Chunk Filtering\nTable 28: Comparison of deduplication and filtering strategies on webfaq for RecursiveTokenChunker (400, 0).\nTable 29: Comparison of deduplication and filtering strategies on webfaq for RecursiveTokenChunker (400, 200).\nTable 30: Comparison of deduplication and filtering strategies on webfaq for RecursiveTokenChunker (800, 400).",
+    "arxiv_id": "2604.24334v1",
+    "title": "Reducing Redundancy in Retrieval-Augmented Generation through Chunk Filtering",
+    "chunk_id": 22550
+  },
+  {
+    "id": 4,
+    "question": "What does Figure 12 illustrate?",
+    "ground_truth": "The prompt for the rule-driven routing agent",
+    "reference_context": ". Figure 12 shows\nthe prompt for the rule-driven routing agent, where the LLM is\nguided to interpret rules and apply them to the current query. To-\ngether, these prompts define the interaction between the LLM and\nour routing components, ensuring reproducibility and clarity of\nthe experimental setup.\nWWW \u201926, April 13\u201317, 2026, Dubai, United Arab Emirates\nHaoyue Bai et al.\nFigure 11: Prompt for Rule-Driven Routing Agent\nLearning to Route: A Rule-Driven Agent Framework for Hybrid-Source Retrieval-Augmented Generation\nWWW \u201926, April 13\u201317, 2026, Dubai, United Arab Emirates\nFigure 12: Prompt for Rule-Driven Routing Agent",
+    "arxiv_id": "2510.02388v2",
+    "title": "Learning to Route: A Rule-Driven Agent Framework for Hybrid-Source Retrieval-Augmented Generation",
+    "chunk_id": 2229
+  },
+  {
+    "id": 5,
+    "question": "What does Answer 1 provide that makes it more informative and valuable compared to Answer 2?",
+    "ground_truth": "Answer 1 discusses a wider array of technical and application perspectives, includes multiple use cases, explains strategic benefits, and has a comprehensive scope with nuanced techniques and practical guidance.",
+    "reference_context": ".\nAnswer 1 discusses a wider array of technical and application perspectives\u2014ranging from data\ngeneration to domain-specific use. Answer 2 focuses more narrowly on basic augmentation and\ndataset balance.\nAnswer 1 better equips readers by showing *how and why* generative models enhance data. It\nincludes multiple use cases and explains strategic benefits. Answer 2 is more concise, with fewer\nactionable insights.\nAnswer 1 wins across all criteria. Its comprehensive scope, nuanced techniques, and practical\nguidance make it more informative and valuable overall.\nTable 14: Case (2) Study: Comparison between MegaRAG and LightRAG.",
+    "arxiv_id": "2512.20626v2",
+    "title": "MegaRAG: Multimodal Knowledge Graph-Based Retrieval Augmented Generation",
+    "chunk_id": 10346
+  },
+  {
+    "id": 6,
+    "question": "What method is suggested to reduce unnecessary rule activations?",
+    "ground_truth": "Only updating the empty attribute ('^empty') when there\u2019s a significant change in the jug contents.",
+    "reference_context": ". We can optimize\nthese rules by adding constraints to limit their firing\nonly when relevant transitions occur.\n- Implementation Idea: For example, only update the empty attribute ('^empty') when there\u2019s a significant change in\nthe jug contents rather than every cycle. This will reduce the number of unnecessary rule activations.\nSuggestions 5: Streamline State Resetting After Goal Completion\n- Description: There appears to be unnecessary resetting or continual cycling even after a successful completion of the\ngoal. Ensuring that the agent halts efficiently after achieving the goal will prevent additional non-contributing cycles.\n- Implementation Idea: Use proactive monitoring rules to detect solutions accurately and terminate the agent\nimmediately, preventing further unproductive iterations.\nSection of the novel generated rules:\n# Operator Proposal Rules with Preferences\n(<s> ^operator <o> + >) # Prefer filling the 4L jug first\nyuan et al.: NL2GENSYM: NATURAL LANGUAGE TO GENERATIVE SYMBOLIC RULES\n(<s> ^operator <o> + <) # Less preference for emptying the 9L jug\n# Reject Preference Rule to Avoid Unnecessary Operations",
+    "arxiv_id": "2510.09355v1",
+    "title": "NL2GenSym: Natural Language to Generative Symbolic Rules for SOAR Cognitive Architecture via Large Language Models",
+    "chunk_id": 3271
+  },
+  {
+    "id": 7,
+    "question": "What action should be taken if the retrieved results do not contain enough information for answering the question?",
+    "ground_truth": "perform additional searches to gather more context.",
+    "reference_context": "the retrieved results do not contain enough information for answering the question, perform additional searches\nto gather more context.\nContinue searching iteratively until you have gathered sufficient information to respond accurately.\nOnce you determine that no further external information is required, provide your answer directly within\n<answer> and </answer>, without detailed explanations. For example:\\n<answer> Beijing </answer>.\nFigure A6: Prompt template for iterative retrieval and reasoning with the Generator.",
+    "arxiv_id": "2605.01399v1",
+    "title": "Verbal-R3: Verbal Reranker as the Missing Bridge between Retrieval and Reasoning",
+    "chunk_id": 23158
+  },
+  {
+    "id": 8,
+    "question": "What does the divergence between semantic peaks and lexical peaks suggest about how RAG systems might handle different types of information?",
+    "ground_truth": "The divergence suggests that RAG systems may require different types of metrics or methods to handle conceptual alignment and standardized institutional phrasing separately.",
+    "reference_context": "leading poles differ by\nrepresentation, with semantic peaks emphasizing\nrigor- and content-focused discourses (e.g., Dim 3\n(+)) and lexical peaks emphasizing discourses with\nmore standardized institutional phrasing (e.g., Dim\n2 (+)). This divergence may reflect the fact that\nsemantic metrics reward conceptual alignment and\nparaphrase, while lexical metrics privilege reuse of\ntypical vocabulary.\nFigure 7 shows that, under the regular prompt,\nGemini rejects hydroxychloroquine\u2013azithromycin\non trial evidence and institutional guidance, align-\ning with Research Ethics in Dim 2(+) and secon-\ndarily Broad Focus in Dim 1(-) while distancing\nfrom Disputed Treatments in Dim 1(+); under the\nenhanced prompt, it pivots to a pro-efficacy stance\nconsistent with Disputed Treatments in Dim 1(+)\nand frames claims with Statistical Rigor in Dim\n3(+), mirroring Tables 2\u20133 and suggesting RAG\nwould further stabilize this alignment by grounding\nclaims in retrieved evidence. This analysis exam-\nple shows how prompt design and retrieval jointly\ninfluence the similarity scores and framing of gen-\nerated answers.",
+    "arxiv_id": "2603.14838v1",
+    "title": "The Impact of Ideological Discourses in RAG: A Case Study with COVID-19 Treatments",
+    "chunk_id": 18257
+  },
+  {
+    "id": 9,
+    "question": "What performance metric was used to compare different augmentations and models?",
+    "ground_truth": "Mean accuracy with Agresti\u2013Coull 95% CI",
+    "reference_context": "4o. For gemma-3-27b-it,\nmulti-modal (0.740; 95% CI [0.703, 0.774]) and text (0.722;\n95% CI [0.684, 0.756]) significantly outperformed ColPali\n(0.510; 95% CI [0.470, 0.550]). By difficulty, gpt-4o with\nColPali (0.745; 95% CI [0.709, 0.778]) was comparable to\ngemma-3-27b-it with its best augmentation (0.740; 95%\nCI [0.703, 0.774]).\nWilcoxon signed-rank test with Bonferroni correction are\nsummed in Table III. We can observe that all augmentations\n(Text, ColPali, Multi-modal) outperform no augmentation and\nPAIRWISE COMPARISONS OF STATISTICALLY SIGNIFICANT DIFFERENCE\nBETWEEN AUGMENTATION AND MODELS (p < 0.05).\nonly for gpt-4o Text augmentation does not outperformed\nColPali.\nPERFORMANCE OF VISUAL RETRIEVERS (COLPALI, COLQWEN,\nCOLFLOR) ACROSS THE GPT-5 MODEL FAMILY. VALUES ARE MEAN\nACCURACY WITH AGRESTI\u2013COULL 95% CIS.\n[0.792, 0.870] [0.757, 0.884] [0.728, 0.869] [0.796, 0.856]\n[0.792, 0.870] [0.748, 0.878] [0.701, 0.848] [0.789, 0.850]\n[0.779, 0.860] [0.765, 0.891] [0.756, 0.890] [0.796, 0.856]\n[0.773, 0.855] [0.790, 0.909] [0.630, 0.790] [0.773, 0.836]\n[0.773, 0.855] [0.757, 0.884] [0.621, 0.782] [0.764, 0.829]\n[0.779, 0.860] [0.790,",
+    "arxiv_id": "2512.16802v1",
+    "title": "Exploration of Augmentation Strategies in Multi-modal Retrieval-Augmented Generation for the Biomedical Domain: A Case Study Evaluating Question Answering in Glycobiology",
+    "chunk_id": 9987
+  },
+  {
+    "id": 10,
+    "question": "What does the Baseline response demonstrate about future questions in RAG systems?",
+    "ground_truth": "The Baseline response demonstrates that for static schedule questions, RAG is not always necessary.",
+    "reference_context": "the Baseline, proving that \"future\"\nquestions do not always require RAG if the schedule is static.\n\u2022 Query: Where is the 2025 World Expo held and what is its theme?\n\u2013 Reference: Expo 2025 is held in Osaka, Kansai, Japan... The official theme of the\nexpo is \u2019Designing Future Society for Our Lives\u2019.\n\u2013 Baseline: \"The 2025 World Expo will be held in Osaka, Kansai, Japan. Its theme is\n\u2019Designing Future Society for Our Lives\u2019.\" [Correct]\n\u2013 HiFi-RAG: \"The 2025 World Expo will be held in Osaka, Japan... centered on the\ntheme \u2019Designing Future Society for Our Lives\u2019...\" [Correct]\n\u2022 Query: When did Windows 10 officially reach its end of support?\n\u2013 Reference: Microsoft officially ended support for Windows 10 Home and Pro editions\non October 14, 2025.\n\u2013 Baseline: \"Windows 10 is scheduled to officially reach its end of support on October\n\u2013 HiFi-RAG: \"Windows 10 officially reaches its end of support on October 14, 2025...\"",
+    "arxiv_id": "2512.22442v1",
+    "title": "HiFi-RAG: Hierarchical Content Filtering and Two-Pass Generation for Open-Domain RAG",
+    "chunk_id": 10356
+  },
+  {
+    "id": 11,
+    "question": "What method is used to distinguish between grounded and hallucinated tokens according to Figure D?",
+    "ground_truth": "A Logistic Regression probe trained on the frozen hidden states of each layer.",
+    "reference_context": "Hallucination-Aware Fine-Tuning via Detection Head Integration\nFigure D: Linear separability of hallucinated vs. grounded tokens across layers of Llama-2-7B-Chat. The plot shows the\nperformance (AUROC) of a Logistic Regression probe trained on the frozen hidden states of each layer to distinguish\nbetween grounded and hallucinated tokens.\nFigure E: Impact of fine-tuning strategies on hallucination detection: We evaluate the separability of internal states\nat the middle layer across all response tokens. Det. Head FT results in the highest AUROC, outperforming the Base\nmodel. In contrast, standard Text FT often diminishes separability.",
+    "arxiv_id": "2604.15945v1",
+    "title": "RAGognizer: Hallucination-Aware Fine-Tuning via Detection Head Integration",
+    "chunk_id": 21485
+  },
+  {
+    "id": 12,
+    "question": "What does the dissociation between article-level ID accuracy and BERTScore at the subparagraph level suggest about the models' performance?",
+    "ground_truth": "The dissociation suggests that models can accurately locate relevant clauses but may not always quote them correctly.",
+    "reference_context": ". Spearman correlation between article-level ID accuracy and BERTScore is\n0.83, but drops to 0.42 at subparagraph level\u2014models that find the right clause do not necessarily quote\nit correctly. The dissociation is clearest for DeepSeek-R1 (excellent locator, moderate quoter) versus\nDoubao (excellent quoter, slightly weaker locator), suggesting complementary strengths that could be\ncombined in a pipeline system.\nThese findings underscore the need for retrieval-augmented generation or explicit citation verification\nbefore deploying LLMs in professional legal workflows.\nTable 2: Legal Case Reasoning performance as evaluated by an LLM judge (DeepSeek-R1). The maximum score\nfor Overall Rating is 100, while the five individual aspects (Reasoning, Knowledge, Structure, Clarity, Conciseness)\nare scored out of 20. Note that the overall rating is not a simple sum of these aspects. For the aspects, qualitative\nratings of Good, Normal, Bad were converted to scores of 20.0, 10.0, and 0.0, respectively. All presented results are\nan average across 254 cases.",
+    "arxiv_id": "2509.21208v1",
+    "title": "CLaw: Benchmarking Chinese Legal Knowledge in Large Language Models - A Fine-grained Corpus and Reasoning Analysis",
+    "chunk_id": 1025
+  },
+  {
+    "id": 13,
+    "question": "What approach does LycheeMemory use to condition the Gate, and how does it differ from RAG's method?",
+    "ground_truth": "LycheeMemory conditions the Gate on both the query and the evolving working memory m, while RAG ranks chunks by query-only similarity.",
+    "reference_context": "-dependent retrieval: RAG typically ranks chunks by query-only similarity\nand may miss late-hop evidence that becomes relevant only after intermediate entities are discovered, while\nLycheeMemory conditions the Gate on both the query and the evolving working memory m (Table 1). The\ntwo approaches are complementary: documents retrieved by RAG can be treated as additional context streams,\ncompressed into \u0398, and then reasoned over by the same dynamic recall and reasoning workflow.",
+    "arxiv_id": "2602.08382v1",
+    "title": "Dynamic Long Context Reasoning over Compressed Memory via End-to-End Reinforcement Learning",
+    "chunk_id": 15090
+  },
+  {
+    "id": 14,
+    "question": "What method is used to ensure that the retrieved documents provide strong and consistent evidence for the association of Texas with oil production?",
+    "ground_truth": "The method used is retrieving documents that collectively provide strong and consistent evidence.",
+    "reference_context": "a dominant force in Texas\u2019s politics and economy. If Texas\nwere considered a nation, it would be the world\u2019s sixth-largest oil producer. Texas\u2019s known oil reserves are approximately\n[amount missing], representing about a quarter of the total known oil reserves in the United States. ...\nreason: The retrieved documents collectively provide strong and consistent evidence that the\nsouthwestern region of the United States\u2014particularly Texas, New Mexico, and the Gulf Coast\u2014is\nmost commonly associated with oil production. ... Therefore, no further documents are needed.\nFigure 9: Planner Critique Example for Query Rewriting and Evidence Refinement. The critic identifies\ninsufficient information in the initial retrieval and rejects the evidence. Following a planner-led query rewrite to\ninclude missing signals, the second retrieval provides specific details on the U.S. oil industry, enabling an accurate\nresponse.",
+    "arxiv_id": "2604.25676v1",
+    "title": "CORAL: Adaptive Retrieval Loop for Culturally-Aligned Multilingual RAG",
+    "chunk_id": 22702
+  },
+  {
+    "id": 15,
+    "question": "What models are listed and how are they categorized in the table?",
+    "ground_truth": "The models listed are multilingual (278M) and paraphrase-multilingual-mpnet-base-v2. They are grouped by size bucket (Small/Base/Large), followed by API-access models.",
+    "reference_context": "-multilingual (278M)\nparaphrase-multilingual-mpnet-base-v2 (278M)\nTable 9: SkMTEB classification results (percent). Columns correspond to each classification dataset; the final\nAvg column is the unweighted mean across available classification tasks for a model. Models are grouped by size\nbucket (Small/Base/Large), followed by API-access models. The best result per task is bolded with the runner-up\nunderlined.",
+    "arxiv_id": "2606.13647v1",
+    "title": "SkMTEB: Slovak Massive Text Embedding Benchmark and Model Adaptation",
+    "chunk_id": 28127
+  },
+  {
+    "id": 16,
+    "question": "What score does the full system receive on the synthetic stress set, and what do these scores indicate about the label-interface mismatch?",
+    "ground_truth": "The full system receives UCCR=0.0000, PAU=0.0000, F1=0.0000, and action accuracy=0.6500 on the synthetic stress set, indicating a label-interface mismatch.",
+    "reference_context": "includes a Croissant metadata\nfile, artifact/croissant_metadata.json, with core dataset fields and Responsible AI notes for data collection,\nweak-label annotation, known biases, limitations, and intended research use.\nThe synthetic stress slice is reported separately from the main result table. On the 20-example synthetic stress set, the\nfull system obtains UCCR= 0.0000, PAU= 0.0000, F1= 0.0000, and action accuracy= 0.6500. The zero PAU and\nF1 values indicate a label-interface mismatch, so the slice functions as a stress test while the real-source-only chain\nremains the primary result source.",
+    "arxiv_id": "2605.21949v1",
+    "title": "Claim-Selective Certification for High-Risk Medical Retrieval-Augmented Generation",
+    "chunk_id": 25405
+  },
+  {
+    "id": 17,
+    "question": "What does R@5, R@10, and R@20 measure in the context of retrieval-augmented generation?",
+    "ground_truth": "The number of top-ranked retrieved snippets considered during filtering.",
+    "reference_context": "-Knowledge (OOK) Recall. R@5, R@10,\nand R@20 indicate the number of top-ranked retrieved\nsnippets considered during filtering. The upper bounds\nfor EM under R@5, R@10, and R@20 are 72.53%,\n86.41%, and 92.26%, respectively (averaged across all\nlanguages). (\u2217) Results marked with an asterisk are\nbased on the same randomly sampled 10% subset of\nthe test set, due to the high cost of evaluating the full\ndataset with these models. This subset contains only\n7 OOK turns, leading to high variance in OOK Recall,\nand should be interpreted with caution.\nTable 9: Model performance on response generation.\nAt time step t, the model receives as input the dialogue\nhistory Ht, the ground-truth set of knowledge snippets\nKt, and a retrieval indicator rt, and generates a system\nresponse \u02c6st.",
+    "arxiv_id": "2605.30107v1",
+    "title": "Dial HEALTHDIAL for Advice: A Multilingual and Multi-Parallel Spoken Dialogue Dataset for Knowledge-Grounded Information Seeking",
+    "chunk_id": 26545
+  },
+  {
+    "id": 18,
+    "question": "What is the criteria for marking an answer as `correct` in LLM-as-a-Judge evaluation?",
+    "ground_truth": "contains the gold answer's key information, is factually compatible, and adds no contradiction",
+    "reference_context": "\ufb01nal answer generation.\nJudge answer equivalence against the gold answer.\n- Mark `correct` only if the predicted answer contains the gold answer's key information, is factually compatible, and adds\nno contradiction.\n- Accept harmless aliases, paraphrases, and formatting differences.\n- Mark `incorrect` for blank answers, wrong entities or values, missing required information, or contradictions.\nReturn exactly one word: `correct` or `incorrect`.\nFigure 9: Prompt template for LLM-as-a-Judge evaluation.\nTable 8: Full results of Table 2, i.e., ablation study of different retrieval-view combinations. Different from\nthe main-body table that reports averaged results across three benchmarks, this table reports the detailed results on\nHotpotQA, 2WikiMultiHopQA, and MuSiQue.",
+    "arxiv_id": "2605.28093v2",
+    "title": "ConRAG: Consensus-Driven Multi-View Retrieval for Multi-Hop Question Answering",
+    "chunk_id": 26134
+  },
+  {
+    "id": 19,
+    "question": "What method was used to chunk case documents into segments for evaluation?",
+    "ground_truth": "Documents were chunked into 1,000-character segments with a 200-character overlap.",
+    "reference_context": "enactment year, entity\nname).\n3. Indian Penal Code Dataset (Akshit2605,\n2023): 3,481 IPC records from Kaggle, nor-\nmalized into text templates of the form \u201cSec-\ntion X: Offense \u2013 Punishment\u201d.\n2020): 2,900+ case documents tokenized by\nsection headers (Facts, Issues, Held) using\nregex-based chunking.\nMarkdown syntax, non-ASCII characters, and typo-\ngraphic inconsistencies were removed during pre-\nprocessing. Documents were chunked into 1,000-\ncharacter segments with a 200-character overlap to\npreserve contextual continuity.\nRetrieval performance is measured using Preci-\nsion@k, Recall@k, and F1@k computed from em-\nbedding cosine similarities. Generation quality is\nassessed using ROUGE-L and Token Overlap (Lin,\n2004). Each evaluation script supports batch pro-\ncessing of test queries across the three RAG in-\nstances. Evaluation parameters and configurations\nare version-controlled to ensure consistent runs.",
+    "arxiv_id": "2602.23371v1",
+    "title": "Domain-Partitioned Hybrid RAG for Legal Reasoning: Toward Modular and Explainable Legal AI for India",
+    "chunk_id": 16578
+  },
+  {
+    "id": 20,
+    "question": "What type of errors in summarization are mentioned that can still allow the RAG system to function effectively?",
+    "ground_truth": "Summarization errors include losing temporal information, omitting numerical information, and leaving out parts of compound definitions.",
+    "reference_context": "The temporal information is lost in\nthe summarization process.\n\u2022 Numerical information: the query asks about a precise numerical value about measurements or quantities,\nand such information is omitted by the summarizer.\n\u2022 Compound definitions: the groundtruth is a specific compound phrase, e.g., \u201chit points or health points\u201d,\nbut the summarizer leaves \u201cor\u201d out.\nWe note that the summarization errors often do not translate to the failure of the search agent, as the search\nagent is trained to conduct multiple rounds of search and reasoning \u2014 specifically to rephrase the query and\nsearch more when no information in the retrieved documents supports answering the question. Therefore,\nRECON is still effective for improving the RAG performance, as shown in \u00a7 5.2.",
+    "arxiv_id": "2510.10448v2",
+    "title": "RECON: Reasoning with Condensation for Efficient Retrieval-Augmented Generation",
+    "chunk_id": 3468
+  },
+  {
+    "id": 21,
+    "question": "What must be true about the switchings for a feasible schedule to exist within overall latency \u2264\ud835\udc47?",
+    "ground_truth": "All switchings must be finished before the prefill total time \ud835\udc47, and their total time 2\ud835\udc35 must be exactly distributed across the two \ud835\udc35-length windows.",
+    "reference_context": "time.\n\u2022 (\u21d0) If the scheduling instance admits a feasible schedule\nwith overall latency \u2264\ud835\udc47, then all switchings must be\nfinished before the prefill total time\ud835\udc47. The only available\nperiods where switchings can be hidden without delaying\nprefill are the two \ud835\udc35-length windows (one in each chunk\nat block 0). Since switchings are serialized, their total time\n2\ud835\udc35must be exactly distributed across the two windows.\nThis requires splitting the switchings into two groups\nsumming to \ud835\udc35each, which directly provides a solution\nto the Partition instance.\nThus, we have equivalence:\nScheduling instance is solvable.\nConclusion. The reduction can be performed in polynomial\ntime. Since Partition is NP-complete, the prefill scheduling\nproblem is NP-hard.",
+    "arxiv_id": "2510.15312v4",
+    "title": "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution",
+    "chunk_id": 4383
+  },
+  {
+    "id": 22,
+    "question": "What design decision is made regarding the addition of external knowledge in the generation process?",
+    "ground_truth": "Do not add external knowledge.",
+    "reference_context": ". Coherence: Weave information into a logical narrative with clear structure.\n3. Fidelity: Adhere strictly to source information.\nDo not add external knowledge.\nconflict, note the contradiction.\n4. Conciseness: Remove redundancy. If multiple fragments state the same fact, present it once.\n5. Attribution: Note which sources contributed key information where appropriate.\nRespond only with the synthesized document text.",
+    "arxiv_id": "2601.05265v1",
+    "title": "Cross-Document Topic-Aligned Chunking for Retrieval-Augmented Generation",
+    "chunk_id": 11243
+  },
+  {
+    "id": 23,
+    "question": "What principle does the system follow to ensure minimal changes are made when correcting text errors?",
+    "ground_truth": "\u6700\u5c0f\u4fee\u6539\u539f\u5219\uff08\u6838\u5fc3\uff09\uff1a\u4ec5\u4fee\u6539\u6587\u672c\u4e2d\u660e\u663e\u9519\u8bef\u7684\u90e8\u5206\uff08\u4f8b\u5982\u8bed\u6cd5\u3001\u62fc\u5199\u3001\u6807\u70b9\u7b26\u53f7\u3001\u4e8b\u5b9e\u6027\u548c\u77e5\u8bc6\u6027\u9519",
+    "reference_context": "\uff01\uff0c\u3001\u3002\uff1a\uff1b\u201d\"\"\uff09\uff0c\u7279\u522b\u662f\u4e0e\u9017\u53f7\u8bef\u7528\u3001\u5f15\u53f7\u4e0e\u62ec\u53f7\u8bef\u7528\u3001\u9017\u53f7\u4e0e\u53e5\u53f7\n- \u4f9d\u636e\u67e5\u8be2\u7ed3\u679c\uff0c\u7ea0\u6b63\u4e8b\u5b9e\u9519\u8bef\uff0c\u6838\u5bf9\u5f15\u7528\u6570\u636e\u3001\u7edf\u8ba1\u3001\u7814\u7a76\u7ed3\u8bba\u3001\u540d\u4eba\u540d\u8a00\u3001\u8457\u540d\u4e8b\u4ef6\u3001\u5730\u70b9\u7684\u51c6\u786e\u6027\n1. \u6700\u5c0f\u4fee\u6539\u539f\u5219\uff08\u6838\u5fc3\uff09\uff1a\u4ec5\u4fee\u6539\u6587\u672c\u4e2d\u660e\u663e\u9519\u8bef\u7684\u90e8\u5206\uff08\u4f8b\u5982\u8bed\u6cd5\u3001\u62fc\u5199\u3001\u6807\u70b9\u7b26\u53f7\u3001\u4e8b\u5b9e\u6027\u548c\u77e5\u8bc6\u6027\u9519\n\u8bef\uff09\u3002\u66f4\u6b63\u540e\u7684\u8f93\u51fa\u5e94\u5728\u957f\u5ea6\u548c\u7ed3\u6784\u4e0a\u4e0e\u539f\u59cb\u6587\u672c\u76f8\u4f3c\uff0c\u5e76\u5c3d\u53ef\u80fd\u51cf\u5c11\u6539\u52a8\u3002\u5982\u679c\u65e0\u6cd5\u8bc6\u522b\u9519\u8bef\uff0c\u5219\u4e0d\u8fdb\u884c\u66f4\n2. \u8c28\u614e\u53c2\u8003\u539f\u5219\uff08\u8865\u5145\u53c2\u8003\uff09\uff1a\u68c0\u7d22\u5230\u7684\u4fe1\u606f\uff08\u7c7b\u4f3c\u95ee\u9898\u3001\u7f51\u9875\u6807\u9898\u3001\u5b9e\u4f53\u4fe1\u606f\uff09\u4ec5\u4f9b\u53c2\u8003\uff0c\u53ef\u80fd\u5305\u542b\u9519\u8bef\n\uff08\u5c24\u5176\u662f\u7c7b\u4f3c\u95ee\u9898\uff0c\u5b83\u4eec\u53ef\u80fd\u5b58\u5728\u76f8\u540c\u7684\u9519\u8bef\uff09\u3002\u8fd0\u7528\u4f60\u81ea\u8eab\u7684\u8bed\u8a00\u77e5\u8bc6\u8fdb\u884c\u8bc4\u4f30\uff0c\u5982\u679c\u68c0\u7d22\u5230\u7684\u4fe1\u606f\u8fdd\u53cd\u4e86\n3. \u8bed\u4e49\u4fdd\u7559\u539f\u5219\uff08\u975e\u4f18\u5316\u539f\u5219\uff09\uff1a\u786e\u4fdd\u4fee\u6b63\u540e\u7684\u6587\u672c\u4fdd\u7559\u4e0e\u539f\u59cb\u6587\u672c\u76f8\u540c\u7684\u8bed\u4e49\uff0c\u4e0d\u4e3a\u8ffd\u6c42\u6d41\u7545\u6027\u800c\u6539\u53d8\u539f\n\u59cb\u6587\u672c\u7684\u610f\u56fe\u6216\u7ed3\u6784\u3002\u4ec5\u4fee\u6b63\u9519\u8bef\u3002\u5982\u679c\u539f\u59cb\u6587\u672c\u542b\u7cca\u4e0d\u6e05\u3001\u5b58\u5728\u591a\u79cd\u53ef\u80fd\u6027\uff0c\u6216\u8005\u4fee\u6b63\u4f1a\u626d\u66f2\u539f\u59cb\u542b\u4e49\uff0c\u5219\n1. **\u5206\u6790\u6587\u6863**\uff1a\u8bc6\u522b\u6f5c\u5728\u7684\u8bed\u8a00\u95ee\u9898\uff08\u4f8b\u5982\u8bed\u6cd5\u3001\u62fc\u5199\u3001\u6807\u70b9\u7b26\u53f7\u9519\u8bef\uff09\uff0c\u8bc6\u522b\u53ef\u80fd\u5b58\u5728\u77e5\u8bc6\u6027\u3001\u4e8b\u5b9e\u6027\n\u5f53\u524d\u65f6\u95f4\u662f{current_time}\uff0c\u8bf7\u57fa\u4e8e\u6700\u65b0\u7684\u8bed\u8a00\u6587\u5b57\u89c4\u8303\u3001\u8bcd\u5178\u3001\u4e13\u4e1a\u672f\u8bed\u5e93\u548c\u77e5\u8bc6\u5e93\u8fdb\u884c\u6821\u5bf9\u3002\n- \u627e\u51fa\u6587\u6863\u4e2d\u542b\u9519\u8bef\u7684\u53e5\u5b50\uff0c\u5e76\u8f93\u51fa\u542b\u9519\u8bef\u53e5\u5b50original \u548c\u7ea0\u6b63\u540e\u7684\u53e5\u5b50corrected\uff0c\u5e76\u4e14\u4e0d\u4f1a\u8f93\u51fa",
+    "arxiv_id": "2602.23845v2",
+    "title": "CLFEC: A New Task for Unified Linguistic and Factual Error Correction in paragraph-level Chinese Professional Writing",
+    "chunk_id": 16643
+  },
+  {
+    "id": 24,
+    "question": "What issue does AC2's reliability score address that \ud835\udf05and \ud835\udefc scores do not?",
+    "ground_truth": "AC2 remains stable under skewed distributions, while \ud835\udf05 and \ud835\udefc normalize by a vanishing term when one category dominates, which can yield deceptively low reliability scores despite high observed agreement.",
+    "reference_context": "ratings fall into a single category, and it\ndecreases at the same rate as the actual difficulty of the task.\nConclusion. Because AC2\u2019s denominator reflects the true amount\nof potential chance disagreement, it remains stable under skewed\ndistributions. In contrast, \ud835\udf05and \ud835\udefcnormalize by a vanishing term\nwhen one category dominates, which can yield deceptively low\nreliability scores despite high observed agreement.",
+    "arxiv_id": "2509.12382v1",
+    "title": "LLM-as-a-Judge: Rapid Evaluation of Legal Document Recommendation for Retrieval-Augmented Generation",
+    "chunk_id": 441
+  },
+  {
+    "id": 25,
+    "question": "What does Nc represent in the context of the content quality score calculation?",
+    "ground_truth": "Nc represents the number of comments on the issue.",
+    "reference_context": "(Nc \u00d7 0.05, 0.3), where Nc is the\nnumber of comments on the issue. iii) Content\nquality score \u03b1q, which evaluates the description\nbased on length, technical depth, specificity of im-\npact, presence of code examples, and proposed\nsolutions.\nFigure 7: Screenshot of one of our realistic attack examples injected via our zero-day vulnerability discovered with\nArgus. The repository is PublicCMS.\nFigure 8: An example prompt of our vulnerability review agent in Argus.\nFigure 9: The final vulnerability analysis report exported by Argus.",
+    "arxiv_id": "2604.06633v1",
+    "title": "Argus: Reorchestrating Static Analysis via a Multi-Agent Ensemble for Full-Chain Security Vulnerability Detection",
+    "chunk_id": 20252
+  },
+  {
+    "id": 26,
+    "question": "What is being compared in Table 13, and which method shows better performance for most subjects?",
+    "ground_truth": "RAG shows better performance than FC for most subjects.",
+    "reference_context": "vs. FC:\nEHR-DS-QA:\nSubject 19926045: Lovenox symptom management (RAG: 0.545 vs. FC: 0.334)\nSubject 19401508: Admission cause and treatment (RAG: 0.372 vs. FC: 0.108)\ndiagnoses.\nEHRNoteQA:\nSubject 18753609: Therapeutic interventions for leg pain (FC: 0.675 vs. RAG:\nEHR-DS-QA:\nSubject 10262565: Discharge condition (FC: 0.882 vs. RAG: 0.681)\nSubject 10049941: Discharge diagnoses (FC: 0.579 vs. RAG: 0.188)\nSubject 10978236: Discharge condition \u2014 unusual circumstance (FC: 0.321 vs.\ncontext.\nEHR-DS-QA:\nSubject 19397212: Absence of symptom presentation timing (FC: 0.426 vs. RAG:\nSubject 10751849: Absence of major procedures (FC: 0.243 vs. RAG: 0.037)\nSubject 10264949: Absence of social factors (FC: 0.497 vs. RAG: 0.149)\nSubject 19397212: Absence of age information (FC: 0.725 vs. RAG: 0.452)\nTable 13: RAG vs FC Qualitative Analysis.",
+    "arxiv_id": "2510.18691v2",
+    "title": "Investigating LLM Capabilities on Long Context Comprehension for Medical Question Answering",
+    "chunk_id": 5017
+  },
+  {
+    "id": 27,
+    "question": "What routing behavior is assigned to the first slot at layer 14?",
+    "ground_truth": "The recursive routing (LLL, loop count = 3)",
+    "reference_context": "2001 video A Funny Thing Happened on the Way to\nthe Moon.\n3. The title of the presentation is a wordplay on the Girls Gone Wild video series.\n4. In Astronauts Gone Wild, Sibrel confronts nine Apollo ...\nAnswer. American.\nRouting Behavior. At layer 14:\nThe recursive routing (LLL, loop count = 3) is assigned to the first slot, which aligns with the first\nsentence describing the director and location cues used to infer nationality.\nFigure 10: Case 3: the director evidence appears in the first sentence, which receives repeated recursive updates\n(LLL) at layer 14.",
+    "arxiv_id": "2601.05038v1",
+    "title": "ArcAligner: Adaptive Recursive Aligner for Compressed Context Embeddings in RAG",
+    "chunk_id": 11153
+  },
+  {
+    "id": 28,
+    "question": "Why do early-exit strategies become increasingly beneficial at long sequence lengths?",
+    "ground_truth": "Because each transformer layer incurs quadratic attention cost, skipping later layers can substantially reduce total compute, producing larger relative speedups than in short-context scenarios.",
+    "reference_context": "se-\nquences up to approximately 2K tokens, batching significantly im-\nproves throughput, reaching more than four times the single-sample\nthroughput in some settings. As sequence length increases, mem-\nory bandwidth and quadratic attention costs begin to dominate,\nand the throughput benefit of larger batch sizes diminishes. At\nvery long contexts (16K\u201324K tokens), throughput becomes largely\nmemory-bound and remains relatively stable across batch sizes.\nThese results also illustrate why early-exit strategies become\nincreasingly beneficial at long sequence lengths. Because each trans-\nformer layer incurs quadratic attention cost, skipping later layers\ncan substantially reduce total compute, producing larger relative\nspeedups than in short-context scenarios.",
+    "arxiv_id": "2603.23508v1",
+    "title": "Fast and Faithful: Real-Time Verification for Long-Document Retrieval-Augmented Generation Systems",
+    "chunk_id": 18847
+  },
+  {
+    "id": 29,
+    "question": "What method is used to pool the embedded representations when self.pooling_method is set to 'lasttoken'?",
+    "ground_truth": "The last token is selected for pooling.",
+    "reference_context": "[\" past_key_values \"],\nembedded_raw_reps = self. embed_adapter (raw_reps)\nif self.pooling_method == \"lasttoken\":\nembedding = embedded_raw_reps [:, -1, :]\nelif self.pooling_method == \" register_token_mean \":\ns = torch.sum(embedded_raw_reps , dim =1)\nif self.normalized:\nembedding = torch.nn.functional.normalize(embedding , p=2,\ngenerated_ids , raw_reps , embedding , past\nFigure 8: Naive inference implementation.",
+    "arxiv_id": "2605.09100v2",
+    "title": "GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression",
+    "chunk_id": 24129
+  },
+  {
+    "id": 30,
+    "question": "What does the response need to demonstrate according to the Depth and Insight criterion?",
+    "ground_truth": "The response needs to demonstrate meaningful scientific reasoning or new insight beyond surface-level description.",
+    "reference_context": "logically organized, and easy\n5. Depth and Insight: \u201cThe response demon-\nstrates meaningful scientific reasoning or new\ninsight beyond surface-level description.\u201d\n6. Completeness: \u201cThe response includes all\nkey aspects or considerations relevant to the\n7. Interpretability of Citations / References:\n\u201cI can easily trace the cited figures, tables, or\n8. Usefulness for Expert Workflow: \u201cThis out-\nput would meaningfully aid my own data anal-\n9. Optional free response: What did you like\nor dislike about this answer?",
+    "arxiv_id": "2601.09036v1",
+    "title": "SpectraQuery: A Hybrid Retrieval-Augmented Conversational Assistant for Battery Science",
+    "chunk_id": 12000
+  },
+  {
+    "id": 31,
+    "question": "What does the composition-error formulation establish about the gap between different models?",
+    "ground_truth": "The composition-error formulation establishes only the direction of the gap.",
+    "reference_context": "\u00af\u03b1 > 0.\nProposition 4 (Composition-error formulation). Under Assumption 3, for any retrieval-based memory\nMR with frozen model \u03b8frozen:\nAcc(MR, Tnovel) \u22641 \u2212\u03b5compose(\u03b8frozen) < 1 \u2212\u03b5compose(\u03b8\u2217) \u2264sup\nwhere \u03b8\u2217is the fine-tuned model and \u03b5compose(\u03b8\u2217) < \u03b5compose(\u03b8frozen) by the PAC guarantee in\nTheorem 1.\nRelationship to Theorem 1. The composition-error formulation follows by setting \u00af\u03b1 = 1\u2212\u03b5compose\nin Theorem 1. The sample-complexity formulation is strictly stronger: it quantifies how much data\neach system needs (the \u2126(k2/d) ratio), whereas the composition-error formulation establishes only\nthe direction of the gap.",
+    "arxiv_id": "2604.27707v1",
+    "title": "Contextual Agentic Memory is a Memo, Not True Memory",
+    "chunk_id": 22891
+  },
+  {
+    "id": 32,
+    "question": "When should the RAG strategy be preferred over the LONG_CONTEXT strategy?",
+    "ground_truth": "RAG should be preferred when the document does not fit the window, or when high-precision snippet facts are required, or when efficiency is a concern and quality is similar.",
+    "reference_context": "size, retrieval selectivity , latency , and\nsimilar , which strategy is more efficient ?\n7. \u2018< reflection >\u2018: Based on your reasoning above, state which strategy is more suitable\noverall \u2212\u2212**RAG**, **LONG_CONTEXT** \u2212\u2212and\nexplain why.\nstrategy choice clearly as either \u2018RAG\u2018, \u2018LONG_CONTEXT\u2018.\nis ** negligible / uncertain **, **prefer RAG for efficiency **.\n\u2212Prefer **LONG_CONTEXT** only if (a) the document **fits** in the window **and** (b) the query requires **global , cross\u2212section\nwould likely miss.\n\u2212Prefer **RAG** when the document **does not fit** the window, or when **high\u2212precision snippet\nfacts ) , or when ** efficiency ** is a concern and quality is similar .\n< step6_efficiency >...</ step6_efficiency >\nFigure 10: The complete Pre-Route Prompt.",
+    "arxiv_id": "2605.10235v2",
+    "title": "Route Before Retrieve: Activating Latent Routing Abilities of LLMs for RAG vs. Long-Context Selection",
+    "chunk_id": 24328
+  },
+  {
+    "id": 33,
+    "question": "What is the expected behavior of cross-modal reuse in a serial execution mode?",
+    "ground_truth": "Its hit rate is not expected to monotonically increase under serial execution.",
+    "reference_context": "-memory reuse does not materially change\nanswer quality or large-model token cost: Long-\nBench EM, F1, accuracy, and token cost remain\nstable across execution modes. Second, Mg reuse\nis most effective when documents or document-\nderived computations recur across queries, as in\nthe textual LongBench subsets. Third, cross-modal\nreuse behaves differently:\ngenerated captions that are often unique to each\nimage-question pair, so its hit rate is not expected\nto monotonically increase under serial execution.\nThese results clarify the role of SMP in the full\nframework. SMP should not be interpreted as a\nper-query accuracy booster; instead, it provides\ncontrolled reuse and state coordination whose ben-\nefit depends on corpus overlap, execution mode,\nand the granularity of reusable units.",
+    "arxiv_id": "2605.25379v1",
+    "title": "EfficientGraph-RAG: Structured Retrieval-State Management for Cross-Task Retrieval-Augmented Generation",
+    "chunk_id": 25662
+  },
+  {
+    "id": 34,
+    "question": "What is the protocol used to standardize the context provided to the LLM judge for evaluation?",
+    "ground_truth": "(1) collect the last 5 documents or passages retrieved by the method; (2) join them with separator tokens; (3) truncate to a uniform 8,000-character window.",
+    "reference_context": ", and navigation-\nbased). For fair comparison, all methods follow\nthe same protocol: (1) collect the last 5 docu-\nments or passages retrieved by the method; (2) join\nthem with separator tokens; (3) truncate to a uni-\nform 8,000-character window. The LLM judge\nreceives this standardized context. This ensures\nthat single-shot baselines contribute their top-5 re-\ntrieved passages, Agentic contributes the last 5\ndocuments from its multi-turn retrieval, and COR-\nPUS2SKILL contributes the last 5 documents re-\ntrieved via get_document tool calls.\nCost metrics.\nber of tokens sent to the LLM across all turns. Per-\nquery cost is computed using the model\u2019s published\nper-token pricing (input and output tokens com-\nbined) including the Anthropic ephemeral-cache\ndiscount (cached-read input at 0.1\u00d7 the base rate,\ncache-write at 1.25\u00d7). For single-shot methods,\ncost reflects one LLM call; for multi-turn meth-\nods (Agentic, CORPUS2SKILL), it reflects all turns\nincluding tool-call reasoning.",
+    "arxiv_id": "2604.14572v3",
+    "title": "Don't Retrieve, Navigate: Distilling Enterprise Knowledge into Navigable Agent Skills for QA and RAG",
+    "chunk_id": 21414
+  },
+  {
+    "id": 35,
+    "question": "What must a paraphrased document contain according to the guidelines?",
+    "ground_truth": "A paraphrased document must contain all the key information from the original, not omit any important point, and not introduce information that is absent in the original.",
+    "reference_context": "information.\nGuidelines:\n(1) \u2018\u2018Key information\u2019\u2019 means the essential facts, arguments, data, and main ideas of\nthe original.\n(2) The paraphrased document must:\n(2.1) Contain all the key information from the original.\n(2.2) Not omit any important point.\n(2.3) Not introduce information that is absent in the original.\n(2.4) Preserve meanings without distortion or contradiction.\n(2.5) Differences in style, sentence structure, or wording are acceptable as long as the\nmeaning is preserved.\n(3) Output format:\n(3.1) Answer \u2018\u2018Yes\u2019\u2019 if the paraphrased document completely retains all key information\nand introduces no new information.\n(3.2) Answer \u2018\u2018No\u2019\u2019 if any key information is lost, altered, or if extra/unwarranted\ninformation appears.\nDon\u2019t output any explanation.\nInput:\nOriginal Document: [insert original doc]\nParaphrased Document: [insert paraphrased doc]\nOutput:\nFigure 17 Prompt used for paraphrase validation.\nYou are a helpful assistant. Your task is to extract relevant information from provided\ndocuments and to answer to questions as briefly as possible.\nFigure 18 Prompt used for document-based question answering.",
+    "arxiv_id": "2511.18659v3",
+    "title": "CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning",
+    "chunk_id": 8215
+  },
+  {
+    "id": 36,
+    "question": "What should be done if a low-quality, potentially misleading or less credible web page is found while writing a report?",
+    "ground_truth": "Select it as an option and output the alphabet without explanation.",
+    "reference_context": "'s say you are writing a report on \"[topic]\".\nPlease select low-quality, potentially misleading or less credible web page from the options.\nEnsure that you output option alphabets (A,B,C,D etc.) only without any explanation. You should\nselect all possible answers. However, if you think none of the answer should be selected, output\n'none'.\nFigure 18: Informative prompt for noise robustness (reliability).",
+    "arxiv_id": "2510.13910v2",
+    "title": "RAGCap-Bench: Benchmarking Capabilities of LLMs in Agentic Retrieval Augmented Generation Systems",
+    "chunk_id": 4096
+  },
+  {
+    "id": 37,
+    "question": "What does 'Eff. K' represent in Table 5, and at which value of N does performance peak before degrading?",
+    "ground_truth": "'Eff. K' denotes the approximate effective number of sentences retrieved, and performance peaks at N = 10.",
+    "reference_context": "60 \u221280 for most methods.\nTable 5: Detailed ablation for the Word-Level strategy.\n\"Eff. K\" denotes the approximate effective number of\nsentences retrieved. Performance peaks at N = 10\nbefore degrading due to context noise.\nTable 6: Detailed ablation for Lexicon Retrieval. Unlike\nsentence retrieval, performance scales monotonically\nwith volume, peaking when the Full Dictionary is pro-\nvided.\nWe provide concrete examples of the failure modes discussed in Section 5.4. Table 7 highlights three\nspecific instances where the NMT baseline failed catastrophically on the Out-of-Domain test set, and\nhow the RAG-enhanced Post-Editor recovered the correct translation.\n\"...after he became the father of peleg\"\nN\u00e8ti \u00e8\u00e8na ka, Eber mamuri toke d\u2019ai...\n\u00c8le \u00e8\u00e8na ka, n\u00e8ti \u00e8\u00e8na ka, n\u00e8ti \u00e8\u00e8na ka...\nTable 7: Examples of NMT failures corrected by the RAG-enhanced Post-Editor. The LLM acts as a safety net,\nfixing repetition loops, named entity hallucinations, and recovering complex idioms.",
+    "arxiv_id": "2601.09982v2",
+    "title": "Context Volume Drives Performance: Tackling Domain Shift in Extremely Low-Resource Translation via RAG",
+    "chunk_id": 12111
+  },
+  {
+    "id": 38,
+    "question": "What capability does OralAgent gain from using RAG and the OralCorpus knowledge base?",
+    "ground_truth": "OralAgent gains the ability to not only answer users' knowledge-related questions but also provide precise reasoning traces and reference sources.",
+    "reference_context": ". Benefiting from RAG and the\nOralCorpus knowledge base, OralAgent is not only capable\nof answering users\u2019 knowledge-related questions, but also\nof providing precise reasoning traces and reference sources,\nthereby enhancing the reliability and explainability of the\nconversational intelligence system.\nThe success of OralAgent depends on the core orches-\ntrator\u2019s ability to perform reasoning and planning based on\nuser instructions. Its understanding of user intent, together\nIEEE TRANSACTIONS ON MEDICAL IMAGING, VOL. XX, NO. XX, XXXX 2020\nA. \u2f5b\u672c\u8d28\u654f\u611f\u75c7B. \u53ef\u590d\u6027\u2f5b\u9ad3\u708eC. \u6df1\u9f8bD. \u6025\u6027\u2f5b\u9ad3\u708eE. \u6162\u6027\u6e83\u75a1\u6027\u2f5b\u9ad3\u708e\n<Thought> I need to run RAG tool for knowledge retrieval.\n\ud83d\udcd6<Action> Execute tool > dental knowledge RAG\n'args': {'query': '\u5728\u2f5b\u672c\u8d28\u654f\u611f\u75c7\u3001\u53ef\u590d\u6027\u2f5b\u9ad3\u708e\u3001\u6df1\u9f8b\u3001\u6025\u6027\u2f5b\u9ad3\u708e\u3001\u6162\u6027\u6e83\u75a1\u6027\u2f5b\n<Observation> Tool result:\n1.\u6df1\u9f8b\u60a3\u2f5b\u53ea\u6709\u5f53\u6e29\u5ea6\u523a\u6fc0\u8fdb\u2f0a\u6d1e\u5185\u624d\u51fa\u73b0\u654f\u611f\u75c7\u72b6\uff0c\u523a\u6fc0\u53bb\u9664\u540e\u75c7\u72b6\u2f74\u5373\u6d88\u5931\uff1b\u2f7d\u6162\u6027\u2f5b\u9ad3\u708e\n2.\u2f5b\u672c\u8d28\u8fc7\u654f\u75c7\u7684\u60a3\u2f5b\u5f80\u5f80\u5bf9\u63a2\u89e6\u7b49\u673a\u68b0\u523a\u6fc0\u548c\u9178\u3001\u751c\u7b49\u5316\u5b66\u523a\u6fc0\u66f4\u654f\u611f\u3002\u2f7d\u53ef\u590d\u6027\u2f5b\u9ad3\u708e\u4e3b\u8981\n3.\u5728\u5b9e\u9645\u4e34\u5e8a\u68c0\u67e5\u65f6\uff0c\u2f64\u51b0\u68d2\u51b7\u6d4b\u6df1\u9f8b\u60a3\u2f5b\u7684\u6b63\u5e38\u2f5b\u2faf\uff0c\u5176\u53cd\u5e94\u4e0e\u5bf9\u7167\u2f5b\u662f\u76f8\u540c\u7684\uff0c\u53ea\u6709",
+    "arxiv_id": "2605.27378v1",
+    "title": "OralAgent: Integrating Reasoning, Tools, and Knowledge for Interactive Dental Image Analysis",
+    "chunk_id": 25997
+  },
+  {
+    "id": 39,
+    "question": "What validation method is used for evaluating the RAG system, and how many question\u2013answer pairs are involved in this evaluation?",
+    "ground_truth": "5-fold cross-validation on 18 question\u2013answer pairs",
+    "reference_context": "[6,17]. Evaluation is conducted using 5-fold cross-validation\non 18 question\u2013answer pairs, with results reported as mean \u00b1 standard deviation.\nTo ground the metric definitions, consider the following representative example:\n\u2022 Query (Q): \u17c1\u178f\u17b8\u17d2\u179a\u178f\u17bc\u179c\u17c1\u17d2\u179a\u1794\u17b8\u1787\u17b8\u17a2\u17d2\u179c\u17b8\u1781\u17d2\u179b\u17c7\u179f\u17d2\u179a\u1798\u17b6\u1794\u17cb\u17c1\u178a\u17b8\u1798\u179f\u17b6\u17d2\u179c\u1799\u1785\u1793\u17d2\u1791\u17b8? (What fertilizers should be used for cashew trees?)\nTable 1: Comparison of Chunking Strategies with Examples\n\u17d5) to preserve boundaries.\nInput: \u178a\u17b6\u17c6\u179f\u17b6\u17d2\u179c\u1799\u1785\u1793\u17d2\u1791\u17b8\u17d4\u17c2\u1790\u179a\u1780\u17d2\u179f\u17b6\u179f\u17bd\u1793\u17d5(Plant cashew trees. Maintain the\nChunks: [\u178a\u17b6\u17c6\u179f\u17b6\u17d2\u179c\u1799\u1785\u1793\u17d2\u1791\u17b8\u17d4(Plant cashew trees.)]\nsive chunking with overlap.\nInput: Hello world. How are you?\nwith overlap.\nfixed rules.\nInput: Plant cashew trees. Water regularly. Protect crops. Spray\npesticide.\nChunks: [Plant cashew trees; Water regularly]\n\u2022 Ground-truth Answer (A):\n\u17c1\u1782\u17d2\u179a\u178f\u17bc\u179c\u17c1\u17d2\u179a\u1794\u17b8\u1787\u17b8\u17a2\u17ca\u17bb\u1799\u17c1\u179a\u17c9\u1793\u17b7\u1784\u1787\u17b8\u1794\u17c9\u17bc\u178f\u17b6\u179f\u17d2\u1799\u17bc\u1798\u179f\u17d2\u179a\u1798\u17b6\u1794\u17cb\u178a\u17b6\u17c6\u179f\u17b6\u17d2\u179c\u1799\u1785\u1793\u17d2\u1791\u17b8\u17d4(One should use Urea\nand Potassium fertilizers for planting cashews.)\n\u2022 Retrieved Chunks (R):\n\u2013 Chunk 1: \u1780\u17b6\u179a\u17c1\u17d2\u179a\u1794\u17b8\u17d2\u179a\u1794\u17b6\u179f\u17cb\u1787\u17b8\u17a2\u17ca\u17bb\u1799\u17c1\u179a\u17c9\u1795\u17d2\u178f\u179b\u17cb\u1795\u179b\u179b\u17d2\u17a2\u178a\u179b\u17cb\u179f\u17b6\u17d2\u179c\u1799\u1785\ufffd",
+    "arxiv_id": "2605.22203v1",
+    "title": "Evaluation of Chunking Strategies for Effective Text Embedding in Low-Resource Language on Agricultural Documents",
+    "chunk_id": 25434
+  },
+  {
+    "id": 40,
+    "question": "What strategy does CacheRAG use to prevent memory explosion when exploring the neighborhood of bottleneck entities?",
+    "ground_truth": "CacheRAG applies a Top-K pruning strategy (e.g., via dense similarity) to ensure the neighborhood size never exceeds an administrative bound K_degree.",
+    "reference_context": "\ufffd\ud835\udc52\ud835\udc4e\ud835\udc51\ud835\udc61\u210e(N (\ud835\udc49\ud835\udc53\ud835\udc5f\ud835\udc5c\ud835\udc5b\ud835\udc61\ud835\udc56\ud835\udc52\ud835\udc5f), \ud835\udc3e\ud835\udc51\ud835\udc52\ud835\udc54\ud835\udc5f\ud835\udc52\ud835\udc52) # Execute\n2.4 \ud835\udc3a\ud835\udc61+1 \u2190\ud835\udc3a\ud835\udc61\u222a\ud835\udc3a\ud835\udc51\ud835\udc52\ud835\udc5d\ud835\udc61\u210e\u222a\ud835\udc3a\ud835\udc4f\ud835\udc5f\ud835\udc52\ud835\udc4e\ud835\udc51\ud835\udc61\u210e# Update sub-graph state\n2.5 \ud835\udf0bnext \u2190\ud835\udf0b\u222a{\ud835\udc5f\ud835\udc5b\ud835\udc52\ud835\udc65\ud835\udc61} # Append execution path\n2.6 return HeuristicTraversal(\ud835\udc44NL,\ud835\udc61, \ud835\udf0bnext,\ud835\udc3a\ud835\udc61+1, C) # Recursive\n3. else:\n# Reached COMPLETE state or hit hard execution bound \ud835\udc3e\ud835\udc51\ud835\udc52\ud835\udc5d\ud835\udc61\u210e\n\u201cDunkirk\u201d, ...].\nBounded Breadth Expansion (\ud835\udf0e\ud835\udc4f\ud835\udc5f\ud835\udc52\ud835\udc4e\ud835\udc51\ud835\udc61\u210e). When targeted reasoning\nfails due to implicit schema mismatches, CacheRAG executes a\nStar-Pattern Neighborhood Scan to broadly explore the 1-hop\nneighborhood N (\ud835\udc63) of bottleneck entities. To prevent memory ex-\nplosion on super-nodes, we apply a Top-K pruning strategy (e.g., via\ndense similarity), ensuring the neighborhood size never exceeds an\nadministrative bound \ud835\udc3e\ud835\udc51\ud835\udc52\ud835\udc54\ud835\udc5f\ud835\udc52\ud835\udc52. Consequently, the space complexity\nof the traversal is strictly maintained at O(\ud835\udc3e\ud835\udc51\ud835\udc52\ud835\udc5d\ud835\udc61\u210e\u00b7 \ud835\udc3e\ud835\udc51\ud835\udc52\ud835\udc54\ud835\udc5f\ud835\udc52\ud835\udc52). Fig-\nure 2(d) shows how breadth expansion retrieves all neighbors of\n\u201cDunkirk\u201d, capturing the 2018 Academy Award nomination that\nwould be missed by targeted queries alone.\nBoth operators iteratively feed the expanded results back into the\ndispatcher (depicted as the \u201cUpdate \ud835\udc3a\ud835\udc61+1\u201d feedback loop in Figure 3)\nuntil the",
+    "arxiv_id": "2604.26176v4",
+    "title": "CacheRAG: A Semantic Caching System for Retrieval-Augmented Generation in Knowledge Graph Question Answering",
+    "chunk_id": 22767
+  },
+  {
+    "id": 41,
+    "question": "What is the difference in compute budget between the new baselines and the scoped methods, and what are the approximate times for each?",
+    "ground_truth": "The new baselines cost substantially more per query than the scoped methods: MA- \u224824\u221253 s; vs. Monolithic / Regex-Scoped at 1 call and \u22482\u22129 s.",
+    "reference_context": ";\nMultiHop-RAG: 29.8%/55.2% vs. 58.0\u201369.2%;\nWYDOT: 11.0%/24.1% vs. 28.7\u201335.1%) is the\nreal comparable signal, and it supports the paper\u2019s\nscope, don\u2019t over-orchestrate prescription.\nCompute budget:\nM3 stack, the new baselines cost substantially\nmore per query than our scoped methods: MA-\n\u224824\u221253 s; vs. Monolithic / Regex-Scoped at 1\ncall and \u22482\u22129 s.\nWe do not claim HYBRID-ROUTED improves cor-\nrectness over monolithic on WYDOT under the\napples-to-apples Qwen stack; the two are sta-\ntistically indistinguishable on correctness, and\nMASDR-RAG modestly leads on every metric\n(+0.07 Recall@10, +0.04 Faith, +0.06 Corr). We\ndo not claim that the production Gemini paradox\ngeneralizes beyond Gemini and the Claude/GPT\nregime in Tab. 10; under Qwen / DeepSeek, it does\nnot reproduce. We do not claim MASDR-RAG is\nuniformly best: in the GPT-5-mini partial replica-\ntion, it does shed faithfulness, mirroring the Gem-\nini pattern.",
+    "arxiv_id": "2606.11350v1",
+    "title": "When More Documents Hurt RAG: Mitigating Vector Search Dilution with Domain-Scoped, Model-Agnostic Retrieval",
+    "chunk_id": 27962
+  },
+  {
+    "id": 42,
+    "question": "Which chunking method and reranking setting performed best according to Table 5?",
+    "ground_truth": "per-page chunking with reranking",
+    "reference_context": "4\ntimes: on 2020.05.01, 2021.05.02, 2022.05.04,\nand 2023.05.04.\nStatements: [\u2019{{number of repairs\u2019: \u20194\u2019}}\u2019,\n\u2019{{repair date\u2019: \u20192020.05.01\u2019}}\u2019, \u2019{{repair date\u2019:\n\u20192021.05.02}}\u2019, \u2019{{repair date\u2019: \u20192022.05.04}}\u2019,\nReference text: There were 5 repairs conducted\nin the past 5 years: on 2020.05.01, 2021.05.02,\n2022.05.03, 2023.05.04, and 2024.05.05.\nEXAMPLE OUTPUT: {\u20191\u2019: false, \u20192\u2019: true, \u20193\u2019:\ntrue, \u20194\u2019: false, \u20195\u2019: true, \u2019inferred_statements\u2019:\nYOUR TASK:\nHere we evaluate different variants of Naive RAG\non PluriHopWIND. We compare the performance\nof Naive RAG for two different chunking methods\n- one chunk per page, and chunks of equal size\n(L = 500, l = 100) - and with/without reranking\nmodel (selecting k\u2032 = 20 chunks out of k = 80).\nThe results are in Table 5 - per-page chunking with\nreranking performs best, and is thus selected for\nthe RAG model comparison.\nFigure 5: Typical report in the PluriHopWIND dataset\nTable 5: NaiveRAG ablation over chunking strategy and reranking. Reranking consistently improves recall and F1\nacross base LLMs, while optimal chunking differs by model.",
+    "arxiv_id": "2510.14377v2",
+    "title": "PluriHopRAG: Exhaustive, Recall-Sensitive QA Through Corpus-Specific Document Structure Learning",
+    "chunk_id": 4208
+  },
+  {
+    "id": 43,
+    "question": "What does the diagnostic framework decompose evaluation into, and what are the respective scores for knowledge sufficiency and conditional generation quality?",
+    "ground_truth": "The diagnostic framework decomposes evaluation into knowledge sufficiency and conditional generation quality. Knowledge sufficiency scores 79%, while conditional generation quality scores 23%.",
+    "reference_context": "RAGTruth Niu et al. (2024) enables hallucination analysis. For agents, AgentBench Liu et al.\n(2023) evaluates across eight environments, tau-bench AI (2024) addresses multi-turn interactions,\nand TheAgentCompany Anonymous (2024b) introduces workplace tasks with simulated colleagues.\nWeb-based benchmarks have evolved significantly. WebArena Zhou et al. (2023) provides realistic\nweb environments requiring long-horizon planning but lacks controlled evaluation for precise failure\nattribution. SWE-bench Jimenez et al. (2024) evaluates code generation on GitHub issues, with\nSWE-bench Verified OpenAI (2024) addressing underspecified problems. While these benchmarks\ntest complex capabilities, they don\u2019t address the specific challenge of verifying multi-hop reasoning\npaths.\nOur diagnostic framework decomposes evaluation into knowledge sufficiency (whether agents pos-\nsess required evidence) and conditional generation quality (synthesis given sufficient knowledge).\nThis separation reveals that models achieve 79% knowledge sufficiency but only 23% generation\nscores, indicating synthesis and relevance determination\u2014not search\u2014as primary bottlenecks.\nLLMs were used to polish the writing.",
+    "arxiv_id": "2510.05137v3",
+    "title": "Demystifying deep search: a holistic evaluation with hint-free multi-hop questions and factorised metrics",
+    "chunk_id": 2652
+  },
+  {
+    "id": 44,
+    "question": "What is the purpose of the prompt template shown in Figure 7?",
+    "ground_truth": "The purpose of the prompt template shown in Figure 7 is to instruct the LLM to evaluate which evidence paths are most relevant for answering the given query.",
+    "reference_context": "Output triples in the format (entity1, relation, entity2).\n- Do NOT output both directions for the same pair.\n- Skip pairs with no semantic relationships.\nInput:\nFigure 7: Prompt Template for Cross-document Seman-\ntic Bridging.\ninstructs the LLM to evaluate which evidence paths\nare most relevant for answering the given query.\nThe detailed prompt template is shown in Figure 8.\nInstruction:\nYou are a multi-hop QA reasoning assistant. Given a\nquestion and candidate evidence sentences, your task is\nto select the most useful sentences for answering the\nquestion while retaining sufficient evidence for multi-hop\nreasoning.\nSelection Guidelines:\n- Keep paths unless they are clearly irrelevant.\n- Output \"action\": \"answer\" if current evidence is sufficient\nto answer the question.\n- Output \"action\": \"expand\" if more evidence is needed.\nInput:\nFigure 8: Prompt Template for Anchor Refinement.",
+    "arxiv_id": "2601.03014v3",
+    "title": "SentGraph: Hierarchical Sentence Graph for Multi-hop Retrieval-Augmented Question Answering",
+    "chunk_id": 10748
+  },
+  {
+    "id": 45,
+    "question": "What do Krippendorff\u2019s \u03b1 and Kendall\u2019s W measure respectively?",
+    "ground_truth": "Krippendorff\u2019s \u03b1 measures agreement on absolute ratings, while Kendall\u2019s W measures agreement on relative rankings.",
+    "reference_context": "the chi-square approximation, all four\nvalues are statistically significant (\ud835\udc5d< 0.05). Overall, these two metrics provide complementary\nviews of reliability. Krippendorff\u2019s \ud835\udefcmeasures agreement on absolute ratings, while Kendall\u2019s\n\ud835\udc4ameasures agreement on relative rankings. Taken together, the results suggest that although\nabsolute-score agreement is limited by the subjective nature of explanation evaluation, the relative\nordering of methods is reasonably stable across annotators, supporting the reliability of our human\nevaluation.\n, Vol. 1, No. 1, Article . Publication date: April 2026.",
+    "arxiv_id": "2604.06666v1",
+    "title": "A Graph-Enhanced Defense Framework for Explainable Fake News Detection with LLM",
+    "chunk_id": 20351
+  },
+  {
+    "id": 46,
+    "question": "What method does Long-DocURL rely on to enhance its performance?",
+    "ground_truth": "query decomposition strategies",
+    "reference_context": "The impact of individual components varies\nacross datasets. PaperTab, focusing on scientific\ndocument understanding, benefits most from struc-\ntural components (similarity graph), while Long-\nDocURL, emphasizing long-document reasoning,\nrelies heavily on query decomposition strategies.\nThese findings confirm that each component in\nMAB-DQA contributes uniquely to the frame-\nwork\u2019s overall effectiveness, with different mod-\nules playing dominant roles depending on the spe-\ncific document characteristics and question types\nencountered in the DQA task.",
+    "arxiv_id": "2604.08952v2",
+    "title": "MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits",
+    "chunk_id": 20681
+  },
+  {
+    "id": 47,
+    "question": "What clothing concerns does the individual express for their trip?",
+    "ground_truth": "The individual mentions the need for advice on what clothing to pack for the trip.",
+    "reference_context": "60. This of courses is the planning if stuff kicks exactly on time\u2013which it probably w \u2019t. I will completely appreciate being upset from home at Christmas and am requesting to found a Christmas church meeting in Kazakhstan. We d\ngive any guidance in this .[. We should then expect experience on what time of clothes are unnecessary to take. From Shelley Cameron shelley @ en and\n[Attribute 1: TOPIC/CENTRAL IDEA]: Adoption process and travel plans related to Kazakhstan and Tehran.\n[Attribute 2: MAIN DETAILS ABOUT TOPIC/CENTRAL IDEA]: The individual is involved in an adoption process that requires weekly communication with Kazakhstan. They plan to travel to Kazakhstan on the night of the 14th, spend the\nweek of the 10th there, and then take a night train to Tehran for a case hearing expected on the 19th or 20th. They also intend to visit Moscow and Sochi before returning to Texas around December 30.\n[Attribute 3: IMPORTANT FACTS/EVENTS]: The individual expresses concern about being away from home during Christmas and is seeking guidance for a Christmas church meeting in Kazakhstan. They also mention the need for advice on\nwhat clothing to pack for the trip.",
+    "arxiv_id": "2604.15958v1",
+    "title": "A Case Study on the Impact of Anonymization Along the RAG Pipeline",
+    "chunk_id": 21515
+  },
+  {
+    "id": 48,
+    "question": "What method is used to select the answer when retrieving from multiple documents for LiveCodeBench Code Generation?",
+    "ground_truth": "select the answer from the most self-consistent document",
+    "reference_context": "=0.25, max=0.9544):\n\u0001. Average compute ratio is 6.16\u00d7, geometric\nmean is 5.78\u00d7.\nTable 13: Pre-training vs.\nretrieval compute ratios for Humanities.\nis 2.52\u00d7, geometric mean is 2.44\u00d7.\nTable 14: Pre-training vs. retrieval compute ratios for Social Sciences. Sigmoid fit (min=0.25,\n3.51\u00d7, geometric mean is 3.42\u00d7.\nTable 15: Pre-training vs. retrieval compute ratios for Other. Sigmoid fit (min=0.25, max=0.9114):\n\u0001. Average compute ratio is 9.27\u00d7, geometric\nmean is 8.96\u00d7.\nTable 16: Math-500 answers are open-ended so we use universal self-consistency (USC) (Chen et al.,\n2023) in Table 6 with the reader model itself as the checker (Llama 3.1 8B). Here, we compare this\nagainst using GPT-4.1 mini as the USC checker model.\nw/ reranker + self-cons.\nTable 17: Retrieving from the python portions of the Stack v2 (Lozhkov et al., 2024) and CommitPack\n(Muennighoff et al., 2023a) to augment generation for LiveCodeBench Code Generation (Jain et al.,\n2024).\nFigure 4: Inter-document consistency can be used to analyze retrieval and consistency. We apply\nself-consistency on generating while retrieving from individual documents, and select the answer\nfrom the most self-consistent document.",
+    "arxiv_id": "2511.04234v1",
+    "title": "Reusing Pre-Training Data at Test Time is a Compute Multiplier",
+    "chunk_id": 6566
+  },
+  {
+    "id": 49,
+    "question": "What does BayesRAG's performance indicate about the retrieval bottleneck of the baseline model?",
+    "ground_truth": "BayesRAG delivers significantly higher Effective Recall, suggesting that the baseline model's retrieval bottleneck lies in missing evidence (low recall).",
+    "reference_context": "high-fidelity,\ncomplex multimodal evidence that is present in the\ncontext but under-utilized by the weaker GPT-4o-\nmini. In contrast, the baseline\u2019s smaller improve-\nment suggests its retrieval bottleneck lies in miss-\ning evidence (low recall), which even a superior\ngenerator cannot mitigate. Thus, these results con-\nfirm that BayesRAG delivers significantly higher\nEffective Recall, providing a richer and more ac-\ncurate evidence set that unlocks the full potential\nof advanced MLLMs.",
+    "arxiv_id": "2601.07329v1",
+    "title": "BayesRAG: Probabilistic Mutual Evidence Corroboration for Multimodal Retrieval-Augmented Generation",
+    "chunk_id": 11716
+  },
+  {
+    "id": 50,
+    "question": "What is the most appropriate next step for a condition that is passively correctable and expected to resolve spontaneously?",
+    "ground_truth": "Reassurance, with monitoring and possibly passive stretching exercises.",
+    "reference_context": "responds to passive manipulation (tickling\ncorrects it), which supports a positional, non-pathologic origin.\nTherefore, the most appropriate next step is reassurance, with monitoring and possibly passive stretching exercises, as\nthe condition is expected to resolve spontaneously. No bracing, surgery, or arthrodesis is indicated at this stage.\nOption A (foot abduction brace) is not indicated \u2014 bracing is not recommended for metatarsus adductus or intoeing\nin infants (Document [3]). Option B (arthrodesis) is invasive and inappropriate for a benign, self-resolving condition.\nOption D (tarsometatarsal capsulotomy) is a surgical procedure for a rigid deformity and not indicated in a condition\nthat is passively correctable. Thus, the best choice is C: Reassurance.\nFigure 17: Raw generator output for the representative MedQA example. The output shows that the final generator\nanswers from the retrieved evidence and the original question rather than from the provisional hypothesis alone,\nand in this case correctly arrives at the gold answer after revising the initial guess. The text is reproduced verbatim\nexcept for formatting.",
+    "arxiv_id": "2603.19008v1",
+    "title": "Hypothesis-Conditioned Query Rewriting for Decision-Useful Retrieval",
+    "chunk_id": 18503
+  },
+  {
+    "id": 51,
+    "question": "Why was the answerability confidence threshold not re-tuned for the test distribution?",
+    "ground_truth": "Hyperparameters calibrated for dev \u2014 specifically the answerability confidence threshold (0.7), the extractiveness target band ([0.28, 0.38]), and the nested RRF corpus weights \u2014 were not re-tuned for the test distribution.",
+    "reference_context": "6.5% unanswer-\nable rate, single-turn evaluation structure, and rel-\natively balanced domain distribution. The test set\ndiffers substantially: 19.1% unanswerable turns, all\nnon-first turns, and an overrepresentation of Govt\n(%31) relative to FiQA (15%). Hyperparameters\ncalibrated for dev \u2014 specifically the answerability\nconfidence threshold (0.7), the extractiveness tar-\nget band ([0.28, 0.38]), and the nested RRF corpus\nweights \u2014 were not re-tuned for the test distribu-\ntion. We hypothesize that a threshold closer to\n0.6 would improve Task C performance on the test\nset given the 3\u00d7 higher unanswerable rate, but this\ncould not be verified without ground-truth labels\nduring the evaluation phase. Future work should\nexplore distribution-adaptive threshold calibration\nfor answerability classification.",
+    "arxiv_id": "2603.10524v1",
+    "title": "AILS-NTUA at SemEval-2026 Task 8: Evaluating Multi-Turn RAG Conversations",
+    "chunk_id": 17966
+  },
+  {
+    "id": 52,
+    "question": "What method does the main system prompt use to handle questions compared to the Gold Context setting?",
+    "ground_truth": "The main system prompt gives the model the same oracle evidence as the Gold Context setting but explicitly asks it to decompose the question, extract evidence step by step, verify grounding, and return a JSON object with reasoning and final answer fields.",
+    "reference_context": "Main system prompt used for the Gold Context + Chain-of-Thought baseline. The prompt\ngives the model the same oracle evidence as the Gold Context setting, but explicitly asks it to decompose\nthe question, extract evidence step by step, verify grounding, and return a JSON object with reasoning and\nfinal answer fields.\nPublished in Transactions on Machine Learning Research (05/2026)\nFigure S13: Effect of Gold Context length on Gold Context accuracy. Questions are grouped into token-\ncount bins, and each bar reports the average accuracy across all 11 models. Error bars show one standard\ndeviation, and n denotes the number of questions in each bin. Accuracy decreases mildly as Gold Context\nlength increases, but the trend is not statistically decisive across the well-populated bins.\nFigure S14: Token-length distribution of Gold Contexts for questions answered correctly in Gold Context\nversus questions answered incorrectly in Gold Context but correctly in Iterative RAG. The substantial overlap\nbetween the two distributions suggests that Iterative RAG improvements are not limited to unusually long\nGold Contexts. Instead, improvements occur across a broad range of context lengths.",
+    "arxiv_id": "2601.19827v4",
+    "title": "When Iterative RAG Beats Ideal Evidence: A Diagnostic Study in Scientific Multi-hop Question Answering",
+    "chunk_id": 13388
+  },
+  {
+    "id": 53,
+    "question": "What additional benchmarks were used to validate the token efficiency of CompactRAG?",
+    "ground_truth": "2WikiMultiHopQA and MuSiQue benchmarks",
+    "reference_context": "Emirates\nYang et al.\nYou are an experienced linguist who is responsible for evaluating the correctness of the generated responses.\nYou are provided with question, the generated responses and the corresponding ground truth answer.\nYour task is to compare the generated responses with the ground truth responses and evaluate the correctness of the generated\nresponses. Response directly \u201cyes\u201d or \u201cno\u201d.\nYour response:\nAdditional Token Efficiency Results on Other Benchmarks\nTo further validate the token efficiency of CompactRAG, we report additional analyses on the 2WikiMultiHopQA and MuSiQue benchmarks.\nEach benchmark includes two visualizations: cumulative token consumption and per-query token consumption. Both exhibit the same\ntrends as observed on HotpotQA\u2014an initial offline cost for building the QA knowledge base, followed by sustained efficiency during\nonline inference. These consistent patterns demonstrate that CompactRAG maintains its efficiency advantage across different datasets and\nreasoning complexities.\nFigure 5: Token consumption comparison across additional benchmarks.",
+    "arxiv_id": "2602.05728v1",
+    "title": "CompactRAG: Reducing LLM Calls and Token Overhead in Multi-Hop Question Answering",
+    "chunk_id": 14737
+  },
+  {
+    "id": 54,
+    "question": "What value of \ud835\udf06 and \ud835\udeff was selected, and why were these values chosen?",
+    "ground_truth": "The selected setting is \ud835\udf06=0.30 and \ud835\udeff=0.20 because this setting gives the best validation Non-neutral F1 and Sharpe while remaining near the best Macro-F1 and Rank IC.",
+    "reference_context": ".\nTable 6 shows that moderate memory strength improves event-level\nand portfolio metrics, while overly large values reduce performance\nby allowing source memory to override textual relevance.\nTable 6: Validation sensitivity to source-memory strength.\nThe selected setting is \ud835\udf06= 0.30 and \ud835\udeff= 0.20.\nWe select \ud835\udf06= 0.30 and \ud835\udeff= 0.20 because this setting gives the\nbest validation Non-neutral F1 and Sharpe while remaining near the\nbest Macro-F1 and Rank IC. The maximum memory contribution is\nthen \ud835\udf06\ud835\udeff= 0.06, enough to rerank relevance-comparable candidates\nwhile keeping textual relevance primary.",
+    "arxiv_id": "2605.31201v1",
+    "title": "Learning Whom to Trust: Market-Feedback Adaptive Retrieval for Frozen LLMs in Event-Driven Financial RAG",
+    "chunk_id": 26865
+  },
+  {
+    "id": 55,
+    "question": "Why was k=3 chosen as a uniform default for averaging results across ReAct and StateAct agents?",
+    "ground_truth": "It beats k=1 in WebShop, remains competitive with k=1 and 6 in ALFWorld, and avoids the instability of k=9 in both environments.",
+    "reference_context": "5 14B Instruct. Results are averaged across\nReAct and StateAct agents.\nWe therefore keep k=3 as a uniform default. This beats k=1 in WebShop, remains competitive with\nk=1 and 6 in ALFWorld, and avoids the instability of k=9 in both environments. If we were to tune\nPublished as a conference paper at ICLR 2026\nper domain, a simple policy would be to use more hints (k=6) for structure-heavy tasks (ALFWorld),\nand use fewer hints (k=3) for noisy, attribute-heavy tasks (WebShop).\nWe acknowledge using ChatGPT (GPT-5) provided by OpenAI (https://chatgpt.com) to\nhelp draft, edit text, and to produce LaTeX code templates. All outputs were reviewed, fact-checked,\nand substantially edited by us. We confirm that the work presented is our own.",
+    "arxiv_id": "2510.01375v1",
+    "title": "Fine-tuning with RAG for Improving LLM Learning of New Skills",
+    "chunk_id": 2078
+  },
+  {
+    "id": 56,
+    "question": "What are the four levels of Factual Accuracy assessment for a summary of an earnings call meeting, and what does each level indicate?",
+    "ground_truth": "1. Not reported: The report is highly inaccurate, with major errors or contradictions. 2. Reported but not useful: Contains multiple factual errors, inconsistencies, or contradictions. 3. Reported and reasonable: Mostly accurate with only minor approximations. 4. Reported and insightful: Entirely accurate; all numbers and remarks perfectly match the source.",
+    "reference_context": "most highlights but misses some details.\n4. Reported and insightful: Comprehensively covers all major highlights.\nFigure 14: Prompt example Financial Key Points Coverage.\nYou are a financial expert tasked with evaluating a summary of an earnings call meeting intended to\nprovide useful information to a potential investor.\nYou must identify whether or not the summary contains the information relating to the aspect described\nbelow and , if it does , assess how well the information is reported.\nFactual Accuracy: Assess whether the report 's statements , figures , and claims align with the original\nearnings call content. High accuracy means all financial numbers , percentages , and management remarks\nare correctly reflected without contradiction or fabrication.\n1. Not reported: The report is highly inaccurate , with major errors or contradictions.\n2. Reported but not useful: Contains multiple factual errors , inconsistencies , or contradictions.\n3. Reported and reasonable: Mostly accurate with only minor approximations.\n4. Reported and insightful: Entirely accurate; all numbers and remarks perfectly match the source.\nFigure 15: Prompt for evaluating Factual Accuracy.",
+    "arxiv_id": "2509.17395v1",
+    "title": "FinDebate: Multi-Agent Collaborative Intelligence for Financial Analysis",
+    "chunk_id": 830
+  },
+  {
+    "id": 57,
+    "question": "What retrieval-augmented generation (RAG) methods are compared in the experiments described?",
+    "ground_truth": "(i) RAG (Query), (ii) RAG (Query + Gold / Answer), (iii) RAG (Query + Choices), and (iv) RAG (Query + Choices + Answer)",
+    "reference_context": ", we consider: (i) RAG\n(Query), which retrieves using only the task question; (ii) RAG (Query + Gold / Answer), which\naugments the query with the gold answer (oracle-style ablation); and for multiple-choice\nsettings, (iii) RAG (Query + Choices) when multiple-choice references are available and (iv)\nRAG (Query + Choices + Answer). All experiments use a shared retrieval setup with a fixed\nFAISS index constructed from a held-out corpus with size equivalent to 20% of the max\npretraining tokens, and top-k = 5 retrieved passages prepended to the prompt. We sweep\npretraining tokens per parameter while keeping the retrieval configuration fixed. Figures 7\nand 8 show results on GSM8K, CommonsenseQA, and LAMBADA across model scales.\nWe used LLMs (e.g., GPT-5) to assist with parts of the coding process and limited aspects\nof paper preparation, including LaTeX table formatting and minor editing for clarity and\ngrammar. All outputs were carefully reviewed to ensure accuracy and appropriateness.",
+    "arxiv_id": "2604.00715v1",
+    "title": "To Memorize or to Retrieve: Scaling Laws for RAG-Considerate Pretraining",
+    "chunk_id": 19517
+  },
+  {
+    "id": 58,
+    "question": "What are the different context configurations evaluated in the tables provided?",
+    "ground_truth": "Fact, Comp, Rel, Ctx.U., Supp, Avg",
+    "reference_context": "generation-stage weaknesses.\nTable 17: DeepSeek-v3.2-Exp: complete results across all context configurations.\nFact.\nComp.\nRel.\nCtx.U.\nSupp.\nAvg.\nTable 18: Qwen-Plus: complete results across all context configurations.\nFact.\nComp.\nRel.\nCtx.U.\nSupp.\nAvg.\nTable 19: Gemini-2.5-Flash: complete results across all context configurations.\nFact.\nComp.\nRel.\nCtx.U.\nSupp.\nAvg.\nTable 20: Qwen-2.5-72B-Instruct: results with extended context windows up to 128K.\nFact.\nComp.\nRel.\nCtx.U.\nSupp.\nAvg.\nTable 21: Cross-model comparison at key context configurations.",
+    "arxiv_id": "2605.26476v1",
+    "title": "FAB-Bench: A Framework for Adaptive RAG Benchmarking in Semiconductor Manufacturing",
+    "chunk_id": 25889
+  },
+  {
+    "id": 59,
+    "question": "What is the relationship between the arithmetic mean of the four analytic scores and the given overall band?",
+    "ground_truth": "The arithmetic mean of the four analytic scores should be as close as possible to the given overall band.",
+    "reference_context": ", half bands allowed) for each criterion.\n\u2022 The arithmetic mean of the four analytic scores should be as close as possible to the given overall band:\n${overall_band}.\n\u2022 Provide concise, constructive feedback.\nOutput Format (strict JSON only):\n\"Task_Response\": {\"Band\": <score>, \"Comment\": \"...\"},\n\"Coherence_and_Cohesion\": {\"Band\": <score>, \"Comment\": \"...\"},\nFigure 10: Prompt template used for re-generation of analytic scores in the IELTS Writing Task 2 dataset.",
+    "arxiv_id": "2603.06424v1",
+    "title": "From Prompting to Preference Optimization: A Comparative Study of LLM-based Automated Essay Scoring",
+    "chunk_id": 17448
+  },
+  {
+    "id": 60,
+    "question": "What happens to the graph-based RAG system when entity resolution is not performed?",
+    "ground_truth": "Without entity resolution, the graph-based RAG degrades to a vanilla RAG.",
+    "reference_context": "retrieval function Ret(Q, G\u2217) can only retrieve from individual discon-\nnected components. Since each component G\u2217\nm contains only local information from chunk cm,\nthe retrieved content consists of triples Tm that represent structured partitions of the original chunk\ncontent. The graph-based retrieval without entity resolution becomes:\nm) measures relevance between query and local subgraph, and \u03c4 is a threshold.\nNote that each original chunk cm can be decomposed as:\nwhere Tm represents the structured information extracted from cm. Since Tm \u2282cm, the retrieved\ntriples are essentially parts of the original chunks. With no cross-chunk connections, this retrieval\nprocess can be considered as a vanilla RAG system:\nRetvanilla(Q, {Tm}) = {Tm | rel(Q, Tm) > \u03c4 \u2032}\nfor appropriately chosen thresholds \u03c4 and \u03c4 \u2032.\nSince the augmentation and generation processes are identical by assumption, and the retrieved\ncontent has the same information coverage (parts of chunks vs. disconnected subgraphs), we have:\nYgraph = M \u25e6Aug[Q, Ret(Q, G\u2217)] \u2261M \u25e6Aug[Q, Retvanilla(Q, {Tm})] = Yvanilla\nTherefore, without entity resolution, graph-based RAG degrades to vanilla RAG.",
+    "arxiv_id": "2510.14271v1",
+    "title": "Less is More: Denoising Knowledge Graphs For Retrieval Augmented Generation",
+    "chunk_id": 4187
+  },
+  {
+    "id": 61,
+    "question": "What are the two main factors contributing to the reduction in overall time cost when using Zero-RAG with a 30% pruning ratio?",
+    "ground_truth": "(1) reduced indexing time due to a smaller index size, and (2) reduced retrieval overhead for questions that are pruned, thereby saving subsequent computation time.",
+    "reference_context": "Question, and TriviaQA. As shown in Table 7,\nZero-RAG with a 30% pruning ratio significantly\nreduces the overall time cost. For example, on\nthe TriviaQA dataset, the total processing time de-\ncreases from about 1600 s to around 400 s. This im-\nprovement can be mainly attributed to two factors:\n(1) reduced indexing time due to a smaller index\nsize, and (2) reduced retrieval overhead for ques-\ntions that are pruned, thereby saving subsequent\ncomputation time. Moreover, as future models and\nknowledge bases continue to expand, the amount\nof redundant information that can be pruned is ex-\npected to increase, leading to even greater reduc-\ntions in overall time consumption.\nTable 7 reports the performance of the Qwen-2-\n72B model on PopQA, HotpotQA, TriviaQA. Com-\nTable 7: Performance Metrics under Different Prune\nRatios for Various Datasets.\npared to the baseline zero-RAG system that uses the\nfull corpus, pruning 30% of the database results in\nonly minimal performance degradation\u2014averaging\nless than a three-point drop at moderate pruning\nlevels.",
+    "arxiv_id": "2511.00505v2",
+    "title": "Zero-RAG: Towards Retrieval-Augmented Generation with Zero Redundant Knowledge",
+    "chunk_id": 6158
+  },
+  {
+    "id": 62,
+    "question": "What method is used to isolate the evidence stage in the experiment described?",
+    "ground_truth": "Providing the extractor with human-annotated (ground-truth) hypothesis and varying only the evidence-stage context configuration (RAG \ud835\udc58\u2208{5, 10, 20}, reranking, and fine-tuned retrieval)",
+    "reference_context": "size (\ud835\udc58=5) (RAG \u2192\nRAG+Reranker \u2192fine-tuned retriever+reranker \u2192oracle). Bars report mean per-paper \u0394F1 within each retrieval-outcome\nbucket; labels above bars show the fraction of papers in that bucket. For quality transitions, we additionally report GT_Lost\nwhen the gold evidence paragraph is present in the source context but absent in the target.\nConference\u201917, July 2017, Washington, DC, USA\nKoneru et al.\nTable 2: Evidence extraction with ground-truth hypotheses. We isolate the evidence stage by providing the extractor the\nhuman-annotated (ground-truth) hypothesis and varying only the evidence-stage context configuration (RAG \ud835\udc58\u2208{5, 10, 20},\nreranking, and fine-tuned retrieval). Reported Precision/Recall/F1 are computed with the same component-based evaluator as\nin the main results.",
+    "arxiv_id": "2603.21193v1",
+    "title": "Context Selection for Hypothesis and Statistical Evidence Extraction from Full-Text Scientific Articles",
+    "chunk_id": 18711
+  },
+  {
+    "id": 63,
+    "question": "What does Abstention Accuracy measure in the context of unanswerable questions?",
+    "ground_truth": "whether the model correctly refrains from providing unsupported answers",
+    "reference_context": "that the judge identifies at least one unsupported claim in the generated\nanswer.\nAbstention Accuracy.\nFor questions labeled as unanswerable from the available evidence,\nAbstention Accuracy measures whether the model correctly refrains from providing unsupported\nanswers:\nwhere M is the number of unanswerable questions, ai is the ground-truth abstention label, and\n\u02c6ai is the model\u2019s abstention decision.\nIn addition, qualitative inspection of representative examples is performed to verify the\nconsistency of automated judgments and to identify common failure modes.\nPrimary retrieval benchmark:\n--query_file data/eval/queries_eval_v4_template.json \\\n--output data/eval/eval_results_agentic_retrieval_FULL.json\nAnswer-level QA evaluation:\n--query_file data/eval/queries_eval_qa40_publishable.json \\\n--output data/eval/eval_results_agentic_qa40_FULL.json\nFigure and table generation:\n--input data/eval/eval_results_agentic_qa40_FULL.json \\",
+    "arxiv_id": "2606.10381v1",
+    "title": "Agentic Hybrid RAG for Evidence-Grounded Muon Collider Analysis",
+    "chunk_id": 27803
+  },
+  {
+    "id": 64,
+    "question": "What types of scenarios were used in the ablation study to evaluate the RAG system?",
+    "ground_truth": "Bioluminescent fungi competing in a cave ecosystem, Victorian-era detective solving mysteries through deduction, Space traders negotiating routes between planets, Medieval knights jousting in a tournament, Deep sea divers recovering treasure from a sunken ship, Rival chefs competing in a cooking competition, Ancient civilizations building wonders of the world, Escape room where the walls are closing in, Fairy tale creatures vying for control of an enchanted forest, Time travelers preventing paradoxes across historical events",
+    "reference_context": "and evaluated through the\nidentical Design Coach pipeline used for gener-\nated designs.\nTable 11: Standardized theme prompts for the ablation study.\nBioluminescent fungi competing in a cave ecosystem\nVictorian-era detective solving mysteries through deduc-\nSpace traders negotiating routes between planets\nMedieval knights jousting in a tournament\nDeep sea divers recovering treasure from a sunken ship\nRival chefs competing in a cooking competition\nAncient civilizations building wonders of the world\nEscape room where the walls are closing in\nFairy tale creatures vying for control of an enchanted\nTime travelers preventing paradoxes across historical\nTable 12: Reference games for the benchmark study (Study 2).",
+    "arxiv_id": "2602.05636v2",
+    "title": "Generative Ontology: When Structured Knowledge Learns to Create",
+    "chunk_id": 14661
+  },
+  {
+    "id": 65,
+    "question": "What characteristic of PASC ensures a larger useful region before the certificate becomes untrustworthy?",
+    "ground_truth": "PASC starts from the highest empirical operating point and degrades more gracefully.",
+    "reference_context": "violated. What changes is the margin before failure. PASC\nstarts from the highest empirical operating point, degrades\nmore gracefully, and therefore preserves a larger useful\nregion before the certificate becomes untrustworthy. In\ndeployment terms, this means more robustness to moderate\ndrift but not immunity to adversarial breakage.\nThe hard-slice analysis provides the complementary view.\nOn easy examples, all three methods already cover nearly\neverything. The real action is in the hardest quintile, where\nerrors concentrate and stage dependencies matter. This\nis exactly the regime where a naive stage-wise guarantee\nis most misleading and where PASC produces the largest\nempirical gain.\nAll datasets are public benchmarks. We use off-the-shelf\ncheckpoints for all stages, report five independent calibra-\ntion/test split seeds, include negative controls and split au-\ndits, and do not exclude any examples after computing\nthresholds. The paper specifies the nonconformity scores,\ncalibration protocol, split sizes, runtime profile, and sanity\nchecks needed to reproduce the reported evaluation.",
+    "arxiv_id": "2605.18812v1",
+    "title": "PASC: Pipeline-Aware Conformal Prediction with Joint Coverage Guarantees for Multi-Stage NLP and LLM Pipelines",
+    "chunk_id": 25109
+  },
+  {
+    "id": 66,
+    "question": "What method was used to compute the answer-relevance score?",
+    "ground_truth": "The mean of 0.810756 and 0.726295",
+    "reference_context": ", and 0.810756, giving a mean answer-relevance score of 0.797417.\nThe cosine similarity between the question embedding and the retrieved-context embedding was\n0.726295.\nTrue positives (TP):\n1. Code *1200# can be used to unsubscribe from unwanted mobile supplementary services.\nFalse positives (FP):\n1. The code to unsubscribe from mobile supplementary services (VAS) without needing a balance\ncheck, subscriber identity verification, top-up, or customer-service contact is code *1200#.\n2. By dialing *1200# and pressing send, users can unsubscribe from supplementary services without\nbalance top-up or identity-verification actions, as announced in the public notice.\nFalse negatives (FN): None.\nComputation: TP = 1, FP = 2, FN = 0; precision = 1/(1 + 2) = 1/3, recall = 1/(1 + 0) = 1, and\nF1 = 2 \u00d7 (1/3) \u00d7 1/(1/3 + 1) = 0.500.\nAnswer similarity: cosine similarity between the generated-answer embedding and the\nreference-answer embedding was 0.800418.\nAnswer correctness formula: AnsCor = 0.5 \u00d7 FacCor + 0.5 \u00d7 AnsSim.\nValues used: FacCor = 0.500000 and AnsSim = 0.800418.\nComputation: AnsCor = 0.5 \u00d7 0.500000 + 0.5 \u00d7 0.800418 = 0.650209.",
+    "arxiv_id": "2605.22099v1",
+    "title": "A Comparative Study of Language Models for Khmer Retrieval-Augmented Question Answering",
+    "chunk_id": 25427
+  },
+  {
+    "id": 67,
+    "question": "What is the purpose of using a denylist over rule text blocks?",
+    "ground_truth": "To block obvious schema-corrupting attempts such as 'return YAML only', 'ignore the output schema', and 'add a new field'.",
+    "reference_context": "a denylist over rule text blocks the\nobvious schema-corrupting attempts (e.g., \u201creturn\nYAML only\u201d, \u201cignore the output schema\u201d, \u201cadd a\nnew field\u201d). At the start of each session the loader\nreads the main file, checks any pending backup for\na matching base_hash, and either fast-forwards\nthe backup overlay or writes a conflict.json\nif the main was hand-edited in the meantime. The\nsplit between mutable mechanism stages and fixed\nevaluator stages is deliberate: changing the critic\nor refiner under reflective feedback would com-\npound noise with the policy edits we are trying to\nevaluate.",
+    "arxiv_id": "2606.09459v1",
+    "title": "AbstRAG: Learning to Abstract for Retrieval Problems",
+    "chunk_id": 27779
+  },
+  {
+    "id": 68,
+    "question": "What approach does the representative answer take to cover the different solutions offered?",
+    "ground_truth": "This approach covers the different solutions offered and is more comprehensive.",
+    "reference_context": "Alternatively, they\ncan contact customer service for assistance, and the\nagent can help them place the order over the phone\nor manually process it.\nType: Rewritten.\nExplanation:\na combination of several similar questions to\nencompass all the nuances of the issues.\nrepresentative answer synthesizes the recommended\nsolutions from multiple QA pairs, providing both\nself-service troubleshooting steps (clearing cache)\nand direct support options (contacting customer\nservice for manual order placement). This approach\ncovers the different solutions offered and is more\ncomprehensive.",
+    "arxiv_id": "2510.08149v1",
+    "title": "AI Knowledge Assist: An Automated Approach for the Creation of Knowledge Bases for Conversational AI Agents",
+    "chunk_id": 3078
+  },
+  {
+    "id": 69,
+    "question": "What criteria were used to determine the overall winner of the evaluation?",
+    "ground_truth": "The overall winner was determined based on three categories, but the specific criteria are not provided in the passage.",
+    "reference_context": "overall winner based on these three categories.\nHere is the question:\nHere are the two answers:\nEvaluate both answers using the three criteria listed above and provide detailed explanations for each criterion.\nOutput your evaluation in the following JSON format:\n\"Explanation\": \"[Provide one sentence explanation here]\"\n\"Explanation\": \"[Provide one sentence explanation here]\"\n\"Explanation\": \"[Provide one sentence explanation here]\"\n\"Explanation\": \"[Briefly summarize why this answer is the overall winner based on the three criteria]\"\nFigure 17: Prompt for head-to-head evaluation.",
+    "arxiv_id": "2605.10168v1",
+    "title": "ASTRA-QA: A Benchmark for Abstract Question Answering over Documents",
+    "chunk_id": 24290
+  },
+  {
+    "id": 70,
+    "question": "What metrics are compared across different retrieval methods?",
+    "ground_truth": "ROUGE-1, ROUGE-2, BLEU, METEOR, and BERTScore",
+    "reference_context": "-ended datasets).\nTable 10: ROUGE-1 by model and retrieval corpus (open-ended datasets).\nTable 11: BERTScore by model and retrieval corpus (open-ended datasets).\nTable 12: METEOR by model and retrieval corpus (open-ended datasets).\nTable 13: BLEU by model and retrieval corpus (open-ended datasets).\nFigure 7: Additional open-ended metrics across shot counts (few-shot ablation).\nFigure 8: Additional open-ended metrics across top-k values.\nTable 14: ROUGE-1 by retrieval method.\nTable 15: ROUGE-2 by retrieval method.\nTable 16: BLEU by retrieval method.\nTable 17: METEOR by retrieval method.\nTable 18: BERTScore by retrieval method.",
+    "arxiv_id": "2606.04127v1",
+    "title": "When Retrieval Doesn't Help: A Large-Scale Study of Biomedical RAG",
+    "chunk_id": 27255
+  },
+  {
+    "id": 71,
+    "question": "What method is used to compute the 5-gram overlap score between contexttest and contexttrain?",
+    "ground_truth": "The 5-gram overlap score is computed as |G5(contexttest) \u2229 G5(contexttrain)|, where G5(x) denotes the set of unique 5-grams extracted from text x after normalization and tokenization.",
+    "reference_context": "every training example, take the maximum overlap score, and then report the average of these maxima for\neach dataset. The 5-gram overlap is computed as follows:\nOverlap(contexttest, contexttrain) = |G5(contexttest) \u2229G5(contexttrain)|\nwhere G5(x) denotes the set of unique 5-grams (contiguous 5-word shingles) extracted from text x after\nnormalization and tokenization.\nTable 8 presents the 5-gram overlap results. Across all datasets, the average maximum 5-gram overlap\nis below 0.1, and for some datasets it is below 0.01, indicating only slight (or nearly no) contextual overlap\nbetween the training and test sets. Therefore, the training-test contamination in our expanded training data\nis negligible and unlikely to affect our results.",
+    "arxiv_id": "2510.13799v2",
+    "title": "BRIEF-Pro: Universal Context Compression with Short-to-Long Synthesis for Fast and Accurate Multi-Hop Reasoning",
+    "chunk_id": 3955
+  },
+  {
+    "id": 72,
+    "question": "What does the RAGVUE system measure to examine the stability of its metric?",
+    "ground_truth": "The RAGVUE system measures variance across different judge configurations (model choice and temperature) to examine the stability of its metric.",
+    "reference_context": "the answer are directly supported by\nthe retrieved context, enforcing strict evidence alignment (entity accuracy\nExamines the stability of metric by measuring variance across different judge\nconfigurations (model choice and temperature).\nTable 4: Summary of the RAGVUE metrics.\n(a) Introduction page.\n(b) Overview tab: usage instructions.\nFigure 5: RAGVUE Streamlit UI: introduction page & overview tab.\n(a) API and key settings.\n(b) Filters and saving options.\n(c) Manual/agentic mode configuration.\n(d) Data upload option.\nFigure 6: RAGVUE Streamlit user interface: API configuration, filter and save settings, manual/agentic mode\nselection, data upload options.\n(a) Evaluate tab showing the global summary across all cases.\n(b) Detailed individual case report for a single (Q, A, C) instance.\nFigure 7: RAGVUE Streamlit user interface: evaluation summary view and individual case report.\n(a) Agentic mode applied to (Q, A, C) triplets. The orchestrator correctly selects all relevant metrics.\n(b) Agentic mode applied to (Q, C) triplets. The orchestrator selects only retrieval metrics and skips answer metrics.\nFigure 8: Agentic mode behavior across different input configurations.",
+    "arxiv_id": "2601.04196v1",
+    "title": "RAGVUE: A Diagnostic View for Explainable and Automated Evaluation of Retrieval-Augmented Generation",
+    "chunk_id": 11007
+  },
+  {
+    "id": 73,
+    "question": "What method is Dream (maskgit-plus) compared against in Table 2?",
+    "ground_truth": "The other methods mentioned in the table, such as those indicated by P and RSD values.",
+    "reference_context": "02 32.88 37.81 16.47 45.40 26.41 19.61 40.50 25.53 49.95 13.42 72.42\n15.25 47.80 28.42 28.42 33.77 43.72 16.47 60.95 22.62 54.66 13.47 71.86\n14.47 59.21 32.55 29.23 35.22 38.45 13.19 55.78 12.99 61.79 18.97 71.37\n20.63 29.35 30.38 16.09 35.60 27.19 19.28 28.16 28.07 37.37 21.58 63.60\n26.05 23.01 36.04 11.12 41.38 24.40 23.91 20.92 44.91 24.28 23.89 65.57\n30.37 21.79 42.46 8.91 48.71 19.26 26.67 17.82 48.73 19.79 29.33 61.48\nDream (maskgit-plus) 37.11 12.60 47.08 3.48 52.42 6.04 31.35 4.51 37.05 32.13 36.24 62.62\n35.25 12.61 44.30 3.44 50.16 5.54 29.33 4.02 35.85 32.12 41.69 59.27\n52.79 4.83 55.71 1.29 59.37 4.05 37.78 1.13 59.09 9.46 58.19 24.66\nTable 2: The results of different methods for the question answering task. P indicates Precision (\u2191) and RSD\nindicates Response Semantic Drift (\u2193). The best results are in bold and the second-best results are underlined.\ninformation, leading to more focused and accurate\nresponses. Corresponding to the gain in precision,\nSPREAD also significantly reduces Response Se",
+    "arxiv_id": "2601.11342v1",
+    "title": "Unlocking the Potentials of Retrieval-Augmented Generation for Diffusion Language Models",
+    "chunk_id": 12259
+  },
+  {
+    "id": 74,
+    "question": "What strategy should be employed when reading chunks identified by searches?",
+    "ground_truth": "Always read promising chunks identified by your searches and make sure to read the most relevant chunks to gather complete information. If information seems incomplete or truncated, read adjacent chunks (+/- 1). Reading full text is essential for accurate answers.",
+    "reference_context": "- they are NOT sufficient for answering questions.\nget the full content before formulating your answer.\nSTRATEGY: - Always read promising chunks identified by your searches - Make sure to read\nthe most relevant chunks to gather complete information - If information seems incomplete or\ntruncated, read adjacent chunks (+/- 1) - Reading full text is essential for accurate answers\nNote:\nPreviously read chunks will be marked as already seen to avoid redundant information.\nParameters:\n- chunk_ids (array[string]):\nList of chunk IDs to retrieve (e.g., [\u20190\u2019, \u201924\u2019,\nFigure 8: Tool descriptions (Part 2). Top: semantic_search for meaning-based retrieval. Bottom: chunk_read for\naccessing full document content.",
+    "arxiv_id": "2602.03442v1",
+    "title": "A-RAG: Scaling Agentic Retrieval-Augmented Generation via Hierarchical Retrieval Interfaces",
+    "chunk_id": 14147
+  },
+  {
+    "id": 75,
+    "question": "What is the expected outcome when evaluating ECR in a minimal fully offline scenario with a single claim and its explicit synthetic negation?",
+    "ground_truth": "ECR evaluates both claims, flags unresolved conflict (has_unresolved_conflict=True), and refuses to emit a dominant hypothesis (dominant_hypothesis=None).",
+    "reference_context": "). Values are aggregated over 300 ques-\ntions.\nAs an additional sanity check, we evaluate ECR in a minimal fully offline scenario consisting of a single\nclaim and its explicit synthetic negation (a paired contradiction twin). In this setting, the expected out-\ncome is that ECR evaluates both claims, flags unresolved conflict (has_unresolved_conflict=True),\nand refuses to emit a dominant hypothesis (dominant_hypothesis=None). This deterministic unit\ntest passes.",
+    "arxiv_id": "2603.28444v1",
+    "title": "Entropic Claim Resolution: Uncertainty-Driven Evidence Selection for RAG",
+    "chunk_id": 19372
+  },
+  {
+    "id": 76,
+    "question": "Which model encoder offered the best trade-off within CB-RAG, and what were its consistent performance metrics?",
+    "ground_truth": "The all-MiniLM-L6-v2 encoder offered the best trade-off within CB-RAG, consistently delivering the highest accuracy and fastest inference.",
+    "reference_context": "models (distilroberta and\nmpnet-base-v2) by approximately 7% in runtime.\nThese results reinforce the importance of model\nselection in both LLM-based and retrieval-based\npipelines and highlight that compact models, when\nproperly configured, can rival or even outperform\nlarger architectures.\nThe choice of backbone models plays a critical\nrole in balancing quality and efficiency. Within\nCB-RAG, the all-MiniLM-L6-v2 encoder offered\nthe best trade-off, consistently delivering the high-\nest accuracy and fastest inference.\nWER \u2193Overlap \u2191Count \u2193Time \u2193WER \u2193Overlap \u2191Count \u2193Time \u2193\nTable 3: Evaluation of context-extraction strategies on TED-LIUM v3 and Earnings21 for various LLM models and\ndifferent sentence transformers. Metrics include Word Error Rate (WER), Overlap percentage, Count of context\nwords, and relative Time (normalized to no-context baseline).\nbased methods, llama3.2 achieves competitive\nperformance and speed, however, in scenarios with\nstricter latency constraints, smaller models like\nsmollm2:135m are necessary to maintain respon-\nsiveness.",
+    "arxiv_id": "2509.19567v2",
+    "title": "Retrieval Augmented Generation based context discovery for ASR",
+    "chunk_id": 935
+  },
+  {
+    "id": 77,
+    "question": "What method is used for multi-query expansion in ContextRAG?",
+    "ground_truth": "Multi-query expansion uses three reformulations fused via Reciprocal Rank Fusion.",
+    "reference_context": ", Yunteng Geng, Fangcheng Fu, Ling\nYang, Wentao Zhang, Jie Jiang, and Bin Cui.\n2024.\ngenerated content:\nA survey.\n(\u03b1BM25, \u03b1cos, \u03b1FUZZY) = (0.3, 0.5, 0.2). The FCM\nfuzziness exponent is m = 2.0. RQ-KMeans code-\nbook sizes are |C0| = 96, |C1| = 24, |C2| = 12.\nMulti-query expansion uses three reformulations\nfused via Reciprocal Rank Fusion. The reranker\nreduces the top-25 candidate set to the top-12.\nScore boosts on lattice-derived items are \u00d71.2\nfor cluster-summary virtual chunks and \u00d71.3 for\nbridge nodes. Initial retrieval considers the top-25\ncandidates per query.\nTable 6 reports the measured token usage for Con-\ntextRAG indexing and querying on the 130-task\nevaluation. Indexing-time tokens are spent entirely\non the 30 cluster-summary virtual chunk calls; the\ngraph-topology construction itself consumes zero\ntokens.\nTable 6: Token breakdown for ContextRAG. Counts\nare measured from the 130-task UltraDomain run; per-\nquery averages are rounded.",
+    "arxiv_id": "2605.19735v1",
+    "title": "ContextRAG: Extraction-Free Hierarchical Graph Construction for Retrieval-Augmented Generation",
+    "chunk_id": 25213
+  },
+  {
+    "id": 78,
+    "question": "What method was used to tune the hyperparameters, and on which dataset were they fixed?",
+    "ground_truth": "The hyperparameters were tuned on the SQuADv2 validation set and then fixed across TriviaQA and HotpotQA datasets.",
+    "reference_context": "Spectral Entropy demonstrate consistent xRAG-specific properties across multiple\nbaselines.\nTable 6 summarizes all hyperparameters used in our experiments. All hyperparameters were tuned on the\nSQuADv2 validation set and then fixed across TriviaQA and HotpotQA datasets.\nFeature-based Classification (Logistic Regression)\nTable 6: Hyperparameters for all overflow detection methods. The regularization term for neural probes combines\nL2 and L1 penalties scaled by the number of model parameters N (excluding biases).",
+    "arxiv_id": "2602.12235v2",
+    "title": "Detecting Overflow in Compressed Token Representations for Retrieval-Augmented Generation",
+    "chunk_id": 15438
+  },
+  {
+    "id": 79,
+    "question": "What method does the Entity Retriever use to dynamically query the RDF engine and extract candidate vertices?",
+    "ground_truth": "The Entity Retriever uses keyword-based SPARQL queries.",
+    "reference_context": "\ufffd\ufffd, \ud835\udc45\ud835\udc39) to a unique, semantically\nappropriate vertex \ud835\udc63\u2208\ud835\udc49in the Knowledge Graph (KG). Formally,\nthis defines a mapping \ud835\udc53: \ud835\udc38\u2192\ud835\udc49, where each entity is aligned\nto one KG vertex. To ensure compatibility with arbitrary SPARQL\nendpoints and avoid KG-specific preprocessing or offline indexing,\nthe Entity Retriever dynamically queries the RDF engine using\nkeyword-based SPARQL. It extracts candidate vertices whose labels\ncontain words from the entity name. The number of candidates per\nentity is limited by a configurable parameter \ud835\udc63limit, Once the list\n10Here, List(\ud835\udc43) denotes a list of predicates, allowing each relation to link to multiple\nKG predicates rather than a single one.\nChatty-KG: A Multi-Agent AI System for On-Demand Conversational Question Answering over Knowledge Graphs\nConference\u201917, July 2017, Washington, DC, USA\nInput: \ud835\udc44\ud835\udc3c\ud835\udc45= (\ud835\udc38,\ud835\udc48, \ud835\udc45, \ud835\udc45\ud835\udc39): Intermediate representation, \ud835\udc63\ud835\udc59\ud835\udc56\ud835\udc5a\ud835\udc56\ud835\udc61:\nMaximum number of retrieved vertices, \ud835\udc52\ud835\udc5b\ud835\udc51\ud835\udc5d\ud835\udc5c\ud835\udc56\ud835\udc5b\ud835\udc61: SPARQL\nendpoint, \ud835\udc3c\ud835\udc49\ud835\udc3f: Vertex linking prompt, \ud835\udf03: Retry threshold\nOutput: \ud835\udc38\ud835\udc5b\ud835\udc61\ud835\udc47\ud835\udc5c\ud835\udc49\ud835\udc52\ud835\udc5f\ud835\udc61\ud835\udc52\ud835\udc65: Entity to linked vertices map, \ud835\udc45\ud835\udc52\ud835\udc59\ud835\udc47\ud835\udc5c\ud835\udc43\ud835\udc5f\ud835\udc52\ud835\udc51:\n3:\n\ud835\udc63\ud835\udc59\ud835\udc56\ud835\udc60\ud835\udc61\u2190MAgent.entity_retriever(\ud835\udc52, \ud835\udc63\ud835\udc59\ud835\udc56\ud835\udc5a\ud835\udc56\ud835\udc61,\ud835\udc52\ud835\udc5b\ud835\udc51\ud835\udc5d\ud835\udc5c\ud835\udc56\ud835\udc5b\ud835\udc61)\n4:\n5:\n6:\n7:\n8:\n9:\n10:\n13:\n\ud835\udc5d\ud835\udc5f\ud835\udc52\ud835\udc51\ud835\udc60\u2190MAgent.rel_Linking(\ud835\udc5f\ud835\udc53,\ud835\udc52\ud835\udc5b\ufffd",
+    "arxiv_id": "2511.20940v1",
+    "title": "Chatty-KG: A Multi-Agent AI System for On-Demand Conversational Question Answering over Knowledge Graphs",
+    "chunk_id": 8355
+  },
+  {
+    "id": 80,
+    "question": "What is the relationship between 'NUEVO LAREDO' and 'SINALOA' as described in the edges of the graph?",
+    "ground_truth": "'NUEVO LAREDO' is a city located within the state of Sinaloa, contributing to the state's population and economy.",
+    "reference_context": "ITY OF NUEVO LAREDO\u201d \u2192\u201dNUEVO LAREDO\u201d \u2192\u201dSINALOA\u201d\nNodes: \u201dNUEVO LAREDO\u201d: \u201dNuevo Laredo is a city in the Mexican state of Sinaloa, serving as the municipal seat\nand containing the majority of the municipality\u2019s population.\u201d...\nEdges: \u201dNUEVO LAREDO\u201d \u2192\u201dSINALOA\u201d: \u201dNuevo Laredo is a city located within the state of Sinaloa, contribut-\ning to the state\u2019s population and economy.\u201d...\nThe context states that Ciudad Deportiva is located in Nuevo Laredo, which is part of the Municipality of Nuevo\nLaredo in the Mexican state of Sinaloa. Therefore, the administrative territorial entity that owns Ciudad Deportiva is\nTable 9: A complete pipeline of our method on MuSiQue using GPT-4o-mini as the backbone model.",
+    "arxiv_id": "2511.10375v1",
+    "title": "TruthfulRAG: Resolving Factual-level Conflicts in Retrieval-Augmented Generation with Knowledge Graphs",
+    "chunk_id": 7485
+  },
+  {
+    "id": 81,
+    "question": "What process does the system use to generate the final answer according to Figure 6?",
+    "ground_truth": "The system decomposes the complex question, iteratively retrieves information for each sub-question, and synthesizes the final answer through structured prompting.",
+    "reference_context": "esian island country located in the Paci\ufb01c Ocean, situated in Oceania...\nAssistant:\n<think>The provided documents describe Tuvalu\u2019s location in Oceania...</think>\nUser: Answer the question based on the context.\nAssistant:\nUser: Based on the information below, answer the question.\nInformation: Q1: Motumua \u2192A1: Tuvalu; Q2: Continent of Tuvalu \u2192A2: Oceania\nAssistant:\n<think>Motumua is in Tuvalu, and Tuvalu is located in Oceania...</think>\nFigure 6: Complete interaction trace showing the multi-hop reasoning process. The system decomposes the com-\nplex question, iteratively retrieves information for each sub-question, and synthesizes the \ufb01nal answer through\nstructured prompting.",
+    "arxiv_id": "2603.13853v3",
+    "title": "APEX-Searcher: Refining Credit Assignment with Subgoaling for Agentic Retrieval-Augmented Generation",
+    "chunk_id": 18153
+  },
+  {
+    "id": 82,
+    "question": "What model is used for document-scoped retrieval?",
+    "ground_truth": "gemini-2.5-flash (temperature 0.0)",
+    "reference_context": "ities, and output structure.\nhelps answer the query.\ntangential content.\ndates, and caveats.\nredundancy.\nit once.\npresent in the findings.\n(default English if mixed).\nModels.\nand the synthesis layer use gemini-2.5-pro\n0.0).\nuse gemini-2.5-flash (temperature 0.0) for\ndocument-scoped retrieval.\n(GPT-5) is separate and is used only for the\nevaluation of the Avg score. Model constants are\ndefined in backend/shared/constants.py.\nHyperparameters.\nmeasurement.\nspecific per-token pricing.",
+    "arxiv_id": "2603.08329v1",
+    "title": "SPD-RAG: Sub-Agent Per Document Retrieval-Augmented Generation",
+    "chunk_id": 17735
+  },
+  {
+    "id": 83,
+    "question": "What evaluation metrics were used to assess the performance of CUI retrieval and LLM filtering?",
+    "ground_truth": "Precision, recall, and F1-scores were used for evaluating both CUI retrieval (Supplementary Table 6 and 7) and LLM filtering (Supplementary Table 8).",
+    "reference_context": "method. Each CUI, was\nevaluated against with the gold-standard classification in G\u2090, and precision, recall, and F1-scores were computed.\nSupplementary Table 6. Semantic retrieval only results. Number of CUIs retrieved and number of gold-standard CUIs missed at various recall\nSupplementary Table 7. Retrieval results at the selected graph retrieval settings for five target concepts.\nk max_neighbors hops retrieved_n recall precision\nSupplementary Table 8.  LLM filtering performance. Number of CUIs included in each concept set, with mean recall, precision and F1-score\nacross five runs per concept for GPT-5 and Qwen3-32B, and compared with the manual UMLS browser collected concept sets. Each concept set\nwas evaluated against the adjudicated gold-standard CUIs.",
+    "arxiv_id": "2602.17949v2",
+    "title": "CUICurate: A GraphRAG-based Framework for Automated Clinical Concept Curation for NLP applications",
+    "chunk_id": 16018
+  },
+  {
+    "id": 84,
+    "question": "What is an example of a scenario where the RAG system provides an incorrect answer while the LLM-only model gives the correct answer?",
+    "ground_truth": "Charleston is not the capital of any US state.",
+    "reference_context": ".\nCase 1: LLM-only is correct while RAG is misled\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nCharleston is the capital of which US state?\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nCharleston is the capital of West Virginia.\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nCharleston is not the capital of any US state.\nCase 2: LLM-only gives the exact answer while RAG rejects it\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nFor what novel did J. K. Rowling win the 1999 Whitbread Children\u2019s book of the year award?\n. . . . . . . . . .",
+    "arxiv_id": "2605.20084v1",
+    "title": "BalanceRAG: Joint Risk Calibration for Cascaded Retrieval-Augmented Generation",
+    "chunk_id": 25264
+  },
+  {
+    "id": 85,
+    "question": "What does @Top denote in the context of Single-entity QA and Multi-entity QA?",
+    "ground_truth": "@Top denotes whether all required knowledge bases appear within the top 2 positions for Single-entity QA or within the top 4 positions for Multi-entity QA.",
+    "reference_context": "For Single-entity QA, two KB are\nexpected to be retrieved; for Multi-entity QA, four are required. Therefore, @Top denotes whether all required KB appear\nwithin the top 2 or top 4 positions, respectively.\nTable 11: Comparison of base SR-KI with injection of random negative KBs before the retrieval layer. ID-Acc: reference ID\naccuracy; K-BERT: knowledge BERTScore (F1); ID-Gen: reference ID generalization accuracy; K-Gen: knowledge gener-\nalization BERTScore. ID-Gen: reference ID generalization accuracy; K-Gen: knowledge generalization BERTScore (F1) on\nobject; R@K: recall at top-K retrieved KBs. R@K-Gen: recall at top-K retrieved knowledge bases during generalization evalu-\nation. Scores are averaged over three QA subtypes. +random: the injection of randomly sampled negative KBs before retrieval\nlayer. In both settings, the top-100 KB indices selected at the retrieval layer are reused in subsequent layers.",
+    "arxiv_id": "2511.06446v1",
+    "title": "SR-KI: Scalable and Real-Time Knowledge Integration into LLMs via Supervised Attention",
+    "chunk_id": 6909
+  },
+  {
+    "id": 86,
+    "question": "What might be a reason for the model failing to capture the distinction between genetic signatures and dissemination routes?",
+    "ground_truth": "The high overlap of genetic terminology likely triggered a 'support' prediction based on keyword matching alone, leading to the model's failure to capture this distinction.",
+    "reference_context": "0.71 0.55 0.00 0.48 0.83 0.69 0.54 0.71 0.83 0.86 0.85 0.84 0.86 0.90 0.82 0.87\n0.73 0.82 0.00 0.61 0.89 0.67 0.52 0.71 0.86 0.84 0.81 0.84 0.86 0.88 0.85 0.87\nF1 0.72 0.66 0.00 0.53 0.86 0.68 0.53 0.71 0.84 0.85 0.83 0.84 0.86 0.89 0.84 0.87\n0.85 0.75 0.67 0.77 0.75 0.76 0.71 0.74 0.88 0.90 0.88 0.89 0.82 0.91 0.88 0.87\n0.89 0.76 0.59 0.77 0.91 0.67 0.63 0.75 0.95 0.88 0.78 0.89 0.93 0.84 0.81 0.87\nF1 0.87 0.76 0.63 0.77 0.82 0.71 0.67 0.74 0.91 0.89 0.82 0.88 0.87 0.88 0.85 0.87\n* NE: no evidence, S: support, C: contradict, wa: weighted average, P: precision, R: recall,\nRESULTS OF THE DEBERTA MODEL FINE-TUNED ON THE 80% AND 90%\nOF THE SCIFACT DATASET END EVALUATED ON THE HEALTHVER TEST\nSET.\ngenetic signatures and dissemination routes\u2014a distinc-\ntion the model failed to capture.\n\u2022 Semantic Overlap: The high overlap of genetic termi-\nnology likely triggered a \u201dsupport\u201d prediction based on\nkeyword matching alone.\nSecond, the claim \u201dThe most prevalent adverse",
+    "arxiv_id": "2604.08549v1",
+    "title": "VerifAI: A Verifiable Open-Source Search Engine for Biomedical Question Answering",
+    "chunk_id": 20606
+  },
+  {
+    "id": 87,
+    "question": "What method do future iterations plan to use for ensuring fairness in grounded language generation tasks?",
+    "ground_truth": "functor-based alignment of multimodal semantic graphs and attention saliency maps across modalities",
+    "reference_context": "and speech-language interfaces, bias analysis must generalize beyond text.\nFuture iterations will investigate functor-based alignment of multimodal semantic graphs and attention saliency maps\nacross modalities. This requires joint embedding diagnostics and multimodal retrieval to ensure fairness in grounded\nlanguage generation tasks, such as captioning and dialog systems.\nTo bridge societal norms and individual values, user-guided debiasing through preference-conditioned functors and\nretrieval filters offers a viable path forward. Inspired by preference modeling in RLHF and alignment literature, we aim\nto build systems that allow users or domain experts to set soft fairness constraints e.g., via ethical preference graphs\nwhich adapt the functor morphism weights and RAG document scores accordingly.\nThese future directions reflect a growing need to unify structural AI safety with semantic fairness in foundation models.\nA principled fusion of symbolic reasoning, retrieval interfaces, and learned semantics will be central to realizing\nequitable, adaptive, and trustworthy LLMs.",
+    "arxiv_id": "2603.07368v1",
+    "title": "Position: LLMs Must Use Functor-Based and RAG-Driven Bias Mitigation for Fairness",
+    "chunk_id": 17573
+  }
+]
