@@ -1,0 +1,23 @@
+== (i) truncation
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 21776.94it/s]
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (531 > 512). Running this sequence through the model will result in indexing errors
+  bge    max=512 tokens/chunk mean=508.5 median=516.0 p95=556.0 -> 56.4% truncated (16193); no prefix 41.52%
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 23299.18it/s]
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (477 > 256). Running this sequence through the model will result in indexing errors
+  minilm max=256 tokens/chunk mean=500.5 median=508.0 p95=548.0 -> 98.35% truncated (28236); no prefix 98.35%
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 21517.01it/s]
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (525 > 512). Running this sequence through the model will result in indexing errors
+  e5     max=512 tokens/chunk mean=502.5 median=510.0 p95=550.0 -> 45.51% truncated (13065); no prefix 41.52%
+
+== (ii) fragmentation
+  whitespace words: 8,740,866; distinct cleaned words: 210,065
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (521 > 512). Running this sequence through the model will result in indexing errors
+  bert_wordpiece  tokens/word=1.6373  distinct words with >=4 tokens: 61,958
+     top20: embeddings(4,3166), fine-grained(4,1529), LLM-based(4,1446), adversarial(4,1412), end-to-end(5,1338), GPT-4o(5,1262), Karpukhin(4,1109), trajectories(4,992), state-of-the-art(7,961), heterogeneous(4,809), LLM’s(4,770), GPT-4(4,610), preprocessing(4,575), reproducibility(4,567), chain-of-thought(5,555), hyperparameters(4,546), verifiable(4,541), Hajishirzi(4,531), predefined(4,529), GPT-5(4,509)
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1053 > 1024). Running this sequence through the model will result in indexing errors
+  gpt2_bpe        tokens/word=1.7675  distinct words with >=4 tokens: 72,655
+     top20: retrieval-augmented(5,4005), fine-tuning(4,3048), model’s(4,2909), Retrieval-Augmented(6,2848), HotpotQA(4,1659), fine-grained(4,1529), Retrieval-augmented(7,1472), LLM-based(4,1446), fine-tuned(4,1369), end-to-end(5,1338), GPT-4o(5,1262), user’s(4,1145), Karpukhin(4,1109), state-of-the-art(7,961), LLM’s(5,770), Wen-tau(4,716), Multimodal(4,669), GPT-4(4,610), RAG-based(4,576), chain-of-thought(5,555)
+  qwen2.5         tokens/word=1.7083  distinct words with >=4 tokens: 54,615
+     top20: retrieval-augmented(4,4005), Retrieval-Augmented(4,2848), Retrieval-augmented(5,1472), 2025b(6,1382), 2025a(6,1374), GPT-4o(5,1262), Karpukhin(4,1109), state-of-the-art(4,961), 2024a(6,887), 2024b(6,822), GPT-4(4,610), chain-of-thought(4,555), Hajishirzi(4,531), GPT-5(4,509), question-answering(5,485), cross-lingual(4,451), GPT-4o-mini(6,441), Zettlemoyer(4,428), 2025c(6,407), 62nd(4,405)
+saved out/04_tokenizer_stats.json

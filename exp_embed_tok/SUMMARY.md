@@ -1,0 +1,98 @@
+# SUMMARY — embedding & tokenizer comparison
+
+Questions: 88 (src/data/eval_qa_set.json). All values: mean [bootstrap 95% CI, 1000 resamples, seed 42]. `*` = paired CI excludes 0.
+
+## Step 1 — models
+
+| model | dim | max_seq | encode s | chunks/s | points | raw vectors MB | Qdrant disk MB |
+|---|---|---|---|---|---|---|---|
+| BAAI/bge-base-en-v1.5 | 768 | 512 | 815.97 | 35.2 | 28711 | 84.1 | 621.5 |
+| sentence-transformers/all-MiniLM-L6-v2 | 384 | 256 | 55.96 | 513.1 | 28711 | 42.1 | 688.3 |
+| intfloat/e5-base-v2 | 768 | 512 | 817.24 | 35.1 | 28711 | 84.1 | 687.6 |
+
+## Step 1 — retrieval (top-5)
+
+| config | context_recall | hit5_paper | mrr5_paper | hit5_chunk |
+|---|---|---|---|---|
+| bge_ragfixed|dense | 0.7637 [0.6956, 0.8232] | 0.7045 [0.6023, 0.7955] | 0.6167 [0.5117, 0.7089] | 0.6023 [0.4886, 0.7045] |
+| bge_ragfixed|full | 0.8481 [0.7968, 0.8940] | 0.8295 [0.7500, 0.8980] | 0.7873 [0.6977, 0.8640] | 0.7614 [0.6705, 0.8409] |
+| bge|dense | 0.7368 [0.6674, 0.7972] | 0.6705 [0.5568, 0.7614] | 0.5879 [0.4803, 0.6826] | 0.5455 [0.4318, 0.6477] |
+| bge|full | 0.8374 [0.7864, 0.8848] | 0.7955 [0.7159, 0.8750] | 0.7532 [0.6598, 0.8343] | 0.7273 [0.6250, 0.8182] |
+| minilm|dense | 0.7156 [0.6529, 0.7766] | 0.5795 [0.4773, 0.6818] | 0.5155 [0.4203, 0.6175] | 0.4886 [0.3750, 0.5909] |
+| minilm|full | 0.8519 [0.8052, 0.8972] | 0.8182 [0.7386, 0.8977] | 0.7684 [0.6854, 0.8470] | 0.7500 [0.6591, 0.8295] |
+| e5|dense | 0.7167 [0.6579, 0.7733] | 0.6250 [0.5227, 0.7273] | 0.5059 [0.4144, 0.5983] | 0.4773 [0.3750, 0.5795] |
+| e5|full | 0.8438 [0.7908, 0.8880] | 0.8182 [0.7386, 0.8977] | 0.7589 [0.6695, 0.8432] | 0.7045 [0.6020, 0.7955] |
+
+Reproducibility: identical top-5 lists, exp_bge vs existing rag_fixed: dense 80/88, full 79/88.
+
+### Paired difference vs bge-base (same pipeline)
+
+| diff | context_recall | hit5_paper | mrr5_paper | hit5_chunk |
+|---|---|---|---|---|
+| minilm − bge, dense | -0.0212 [-0.0794, +0.0430] | -0.0909 [-0.1818, +0.0000] | -0.0723 [-0.1608, +0.0073] | -0.0568 [-0.1591, +0.0341] |
+| minilm − bge, full | +0.0145 [-0.0058, +0.0426] | +0.0227 [-0.0341, +0.0795] | +0.0152 [-0.0244, +0.0506] | +0.0227 [-0.0227, +0.0682] |
+| e5 − bge, dense | -0.0202 [-0.0721, +0.0351] | -0.0455 [-0.1250, +0.0341] | -0.0820 [-0.1561, -0.0042] * | -0.0682 [-0.1591, +0.0227] |
+| e5 − bge, full | +0.0064 [-0.0201, +0.0326] | +0.0227 [-0.0227, +0.0682] | +0.0057 [-0.0404, +0.0481] | -0.0227 [-0.0795, +0.0227] |
+
+## Step 2 (i) — truncation (passage string as embedded, special tokens included)
+
+| model | max_seq_length | mean tok | median | p95 | max | % > max (n) | % > max without prefix |
+|---|---|---|---|---|---|---|---|
+| BAAI/bge-base-en-v1.5 | 512 | 508.5 | 516.0 | 556.0 | 2765 | 56.4% (16193) | 41.52% |
+| sentence-transformers/all-MiniLM-L6-v2 | 256 | 500.5 | 508.0 | 548.0 | 2757 | 98.35% (28236) | 98.35% |
+| intfloat/e5-base-v2 | 512 | 502.5 | 510.0 | 550.0 | 2759 | 45.51% (13065) | 41.52% |
+
+## Step 2 (ii) — fragmentation
+
+| tokenizer | tokens / whitespace-word | distinct words ≥4 tokens | % word occurrences ≥4 tokens |
+|---|---|---|---|
+| bert-base-uncased | 1.6373 | 61958 | 2.62% |
+| gpt2 | 1.7675 | 72655 | 3.13% |
+| Qwen/Qwen2.5-7B-Instruct | 1.7083 | 54615 | 2.17% |
+
+Top-20 frequent words with ≥4 tokens — bert-base-uncased: `embeddings` (4 tok, ×3166), `fine-grained` (4 tok, ×1529), `LLM-based` (4 tok, ×1446), `adversarial` (4 tok, ×1412), `end-to-end` (5 tok, ×1338), `GPT-4o` (5 tok, ×1262), `Karpukhin` (4 tok, ×1109), `trajectories` (4 tok, ×992), `state-of-the-art` (7 tok, ×961), `heterogeneous` (4 tok, ×809), `LLM’s` (4 tok, ×770), `GPT-4` (4 tok, ×610), `preprocessing` (4 tok, ×575), `reproducibility` (4 tok, ×567), `chain-of-thought` (5 tok, ×555), `hyperparameters` (4 tok, ×546), `verifiable` (4 tok, ×541), `Hajishirzi` (4 tok, ×531), `predefined` (4 tok, ×529), `GPT-5` (4 tok, ×509)
+
+Top-20 frequent words with ≥4 tokens — gpt2: `retrieval-augmented` (5 tok, ×4005), `fine-tuning` (4 tok, ×3048), `model’s` (4 tok, ×2909), `Retrieval-Augmented` (6 tok, ×2848), `HotpotQA` (4 tok, ×1659), `fine-grained` (4 tok, ×1529), `Retrieval-augmented` (7 tok, ×1472), `LLM-based` (4 tok, ×1446), `fine-tuned` (4 tok, ×1369), `end-to-end` (5 tok, ×1338), `GPT-4o` (5 tok, ×1262), `user’s` (4 tok, ×1145), `Karpukhin` (4 tok, ×1109), `state-of-the-art` (7 tok, ×961), `LLM’s` (5 tok, ×770), `Wen-tau` (4 tok, ×716), `Multimodal` (4 tok, ×669), `GPT-4` (4 tok, ×610), `RAG-based` (4 tok, ×576), `chain-of-thought` (5 tok, ×555)
+
+Top-20 frequent words with ≥4 tokens — Qwen/Qwen2.5-7B-Instruct: `retrieval-augmented` (4 tok, ×4005), `Retrieval-Augmented` (4 tok, ×2848), `Retrieval-augmented` (5 tok, ×1472), `2025b` (6 tok, ×1382), `2025a` (6 tok, ×1374), `GPT-4o` (5 tok, ×1262), `Karpukhin` (4 tok, ×1109), `state-of-the-art` (4 tok, ×961), `2024a` (6 tok, ×887), `2024b` (6 tok, ×822), `GPT-4` (4 tok, ×610), `chain-of-thought` (4 tok, ×555), `Hajishirzi` (4 tok, ×531), `GPT-5` (4 tok, ×509), `question-answering` (5 tok, ×485), `cross-lingual` (4 tok, ×451), `GPT-4o-mini` (6 tok, ×441), `Zettlemoyer` (4 tok, ×428), `2025c` (6 tok, ×407), `62nd` (4 tok, ×405)
+
+## Step 2 (iii) — BM25-only, top-5
+
+| tokenizer | context_recall | hit5_paper | mrr5_paper | hit5_chunk |
+|---|---|---|---|---|
+| regex | 0.7695 [0.7115, 0.8287] | 0.7159 [0.6136, 0.8068] | 0.6415 [0.5470, 0.7323] | 0.5795 [0.4773, 0.6705] |
+| regex_porter | 0.7715 [0.7102, 0.8255] | 0.6705 [0.5682, 0.7727] | 0.6235 [0.5182, 0.7178] | 0.5114 [0.4091, 0.6026] |
+| wordpiece | 0.7501 [0.6811, 0.8101] | 0.6818 [0.5795, 0.7727] | 0.6203 [0.5157, 0.7129] | 0.5568 [0.4545, 0.6477] |
+| regex_porter − regex | +0.0020 [-0.0324, +0.0318] | -0.0455 [-0.1136, +0.0114] | -0.0180 [-0.0741, +0.0368] | -0.0682 [-0.1364, -0.0114] * |
+| wordpiece − regex | -0.0194 [-0.0682, +0.0247] | -0.0341 [-0.1250, +0.0341] | -0.0212 [-0.0786, +0.0307] | -0.0227 [-0.0909, +0.0455] |
+
+Sanity: in-memory regex BM25 top-5 identical to existing pickle for 88/88 questions.
+
+## Step 3 — generation (qwen2.5:7b, existing generator)
+
+Current = `bge_ragfixed|full`; compared = `minilm|full` (best by context recall). Questions: all 88 questions (n=88).
+
+| config | answer_f1 | answer_faithfulness | context_recall |
+|---|---|---|---|
+| bge_ragfixed|full | 0.3634 [0.3140, 0.4133] | 0.8204 [0.7964, 0.8442] | 0.8481 [0.7968, 0.8940] |
+| minilm|full | 0.3747 [0.3272, 0.4267] | 0.8264 [0.8043, 0.8500] | 0.8519 [0.8052, 0.8972] |
+| minilm|full − current | +0.0113 [-0.0102, +0.0337] | +0.0060 [-0.0141, +0.0265] | +0.0037 [-0.0217, +0.0363] |
+
+## Limits
+
+- 88 questions for generation, 88 for retrieval; one QA set, synthetic questions each generated from one chunk.
+- context_recall, answer_f1 and faithfulness are word-overlap metrics (src/evaluate.py), not semantic judgements.
+- Hardware: NVIDIA GeForce RTX 3050, 7.65 GB VRAM; timings are single runs on this machine.
+- Step 3 subset: all 88 questions.
+- Ollama generation is not seeded in the existing generator (used unchanged), so answers may vary between runs.
+## Not done, failed, or caveats
+
+- **05 failed on its first attempt** (ModuleNotFoundError: `build_bim` imported before `src/` was on sys.path). Log kept as `logs/05_bm25_tokenization_FAILED_attempt1.log`. I swapped the two import lines and re-ran it; no logic changed.
+- **The re-embedded bge index does not exactly reproduce the existing `rag_fixed`:** identical top-5 lists for 80/88 (dense) and 79/88 (full) questions, and `exp_bge` scores slightly lower than `rag_fixed` on every metric. I did not investigate the cause (likely library-version or numerical differences in re-encoding). Step-1 paired diffs use `exp_bge` as the reference; Step 3 uses the real current system (`rag_fixed`).
+- **Qdrant on-disk size (`du`) is not a clean size measure:** it includes segment/WAL overhead (MiniLM's 384-dim collection reads larger than bge's 768-dim one). Use raw vector MB to compare sizes.
+- Encode time includes CPU tokenisation, and each number is a single run. Scripts 03/04/05 ran concurrently on the CPU, so the BM25 build seconds and per-config retrieval seconds are approximate. 02 ran alone.
+- The existing bge passage embedding uses the bge *query* instruction as a passage prefix (from `src/embed.py`); I kept it to match the current system and did not test bge without it.
+- Option (c) was e5-base-v2; gte-base was not run.
+- Ollama generation is unseeded (I used the existing generator unchanged), so answer_f1 may vary slightly between reruns.
+- MRR is MRR@5. "Hit/MRR paper" is about the source paper; "hit5_chunk" is about the exact source chunk.
+- I installed `nltk` into the venv for Porter stemming. Three new Qdrant collections were created (`exp_bge`, `exp_minilm`, `exp_e5`). No existing file, collection or index was modified.

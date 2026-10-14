@@ -1,0 +1,32 @@
+== Files (relative to src/)
+  chunks_fixed                                  data/chunks_fixed.json         exists=True size=70253434
+  chunks_semantic                               data/chunks_semantic.json      exists=True size=61732462
+  bm25_index                                    data/bm25_index.pkl            exists=True size=61684336
+  bm25_corpus                                   data/bm25_corpus.pkl           exists=True size=74231444
+  index_qdrant (named index_qudrant.py)         index_qudrant.py               exists=True size=8736
+  build_bm25 (named build_bim.py)               build_bim.py                   exists=True size=3360
+  retrievers (named retreiver.py)               retreiver.py                   exists=True size=9856
+  evaluate                                      evaluate.py                    exists=True size=10037
+  generator                                     generator.py                   exists=True size=5104
+  eval_agentic (88-question LangGraph eval)     eval_agentic.py                exists=True size=8022
+  qa_set                                        data/eval_qa_set.json          exists=True size=122233
+
+== chunks_fixed: 28,711 chunks; keys=['chunk_id', 'arxiv_id', 'title', 'chunk_index', 'total_chunks', 'text', 'char_count']
+   chunk_id == index for all: True
+   distinct papers: 999
+
+== Qdrant collections
+  rag_fixed: points=28711 dim=768 distance=Cosine
+  rag_semantic: points=19633 dim=768 distance=Cosine
+
+== QA set data/eval_qa_set.json: 88 questions; keys=['arxiv_id', 'chunk_id', 'ground_truth', 'id', 'question', 'reference_context', 'title']
+   questions with ground_truth: 88/88
+   questions with arxiv_id: 88/88
+   questions with chunk_id: 88/88
+   distinct source papers: 88
+   source chunk_id belongs to recorded arxiv_id: 88/88
+
+== 30-question set: evaluate.py uses random.sample(seed=42, n=30) from the same 88 (first ids: [81, 14, 3, 35, 31])
+   eval_agentic.py imports QA_PATH from evaluate.py and runs all 88 -> 88 set is the LangGraph set.
+
+== DECISION: main evaluation set = all 88 questions (ground truth present).

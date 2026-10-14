@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+regex         build 2s  context_recall=0.7695  hit5_paper=0.7159  mrr5_paper=0.6415  hit5_chunk=0.5795
+  sanity: in-memory regex top-5 == existing pickle top-5 for 88/88 questions
+regex_porter  build 3s  context_recall=0.7715  hit5_paper=0.6705  mrr5_paper=0.6235  hit5_chunk=0.5114
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (521 > 512). Running this sequence through the model will result in indexing errors
+wordpiece     build 15s  context_recall=0.7501  hit5_paper=0.6818  mrr5_paper=0.6203  hit5_chunk=0.5568
+diff regex_porter-regex context_recall  +0.0020 [-0.0324, +0.0318]
+diff regex_porter-regex hit5_paper      -0.0455 [-0.1136, +0.0114]
+diff regex_porter-regex mrr5_paper      -0.0180 [-0.0741, +0.0368]
+diff regex_porter-regex hit5_chunk      -0.0682 [-0.1364, -0.0114] *CI excludes 0
+diff wordpiece-regex context_recall  -0.0194 [-0.0682, +0.0247]
+diff wordpiece-regex hit5_paper      -0.0341 [-0.1250, +0.0341]
+diff wordpiece-regex mrr5_paper      -0.0212 [-0.0786, +0.0307]
+diff wordpiece-regex hit5_chunk      -0.0227 [-0.0909, +0.0455]
+saved out/05_bm25_tokenization.json

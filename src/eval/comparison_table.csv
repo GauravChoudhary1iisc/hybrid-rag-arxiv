@@ -1,0 +1,4 @@
+strategy,context_recall,answer_faithfulness,answer_f1,n_samples
+dense,0.7537,0.7849,0.3033,30
+hybrid,0.822,0.8089,0.3278,30
+hybrid_rerank,0.8509,0.8127,0.3645,30

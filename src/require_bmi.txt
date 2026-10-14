@@ -1,0 +1,5 @@
+rank-bm25
+qdrant-client
+sentence-transformers
+anthropic
+numpy

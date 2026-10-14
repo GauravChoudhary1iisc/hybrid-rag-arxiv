@@ -1,0 +1,6 @@
+group,stage,n,context_recall,answer_f1,faithfulness,gold_chunk_hit
+all,first_pass,88,0.8481,0.3625,0.8262,0.7614
+all,final,88,0.8575,0.3714,0.8229,0.7727
+never_looped,final,57,0.882,0.3847,0.8494,0.8421
+looped,first_pass,31,0.7858,0.3218,0.7835,0.6129
+looped,final,31,0.8125,0.3469,0.774,0.6452

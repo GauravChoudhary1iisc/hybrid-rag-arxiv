@@ -1,0 +1,124 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading retriever components...
+  Loading embedding model...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 23927.60it/s]
+  Loading cross-encoder reranker...
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 9233.33it/s]
+  Loading BM25 index...
+  Loading chunk records...
+Retriever ready.
+
+Generator ready (model: qwen2.5:7b)
+Classifier smoke test:
+  'What is 2+2?'               retrieval=False  answer='2 + 2 equals 4.'
+  'what is 12 * 7'             retrieval=False  answer='84'
+  'Hello, how are you?'        retrieval=False  answer="Hello! I'm just a computer program, so I don't have feelings"
+
+0 cached, 88 to run
+[1/88] looped  loops=2 recall 1.00→1.00 f1 0.40→0.36 (7.6s)
+[2/88] looped  loops=2 recall 0.88→0.75 f1 0.12→0.30 (7.0s)
+[3/88] single  loops=0 recall 0.91→0.91 f1 0.30→0.30 (3.7s)
+[4/88] single  loops=0 recall 1.00→1.00 f1 0.63→0.63 (3.2s)
+[5/88] looped  loops=2 recall 1.00→0.40 f1 0.23→0.00 (8.5s)
+[6/88] single  loops=0 recall 1.00→1.00 f1 0.23→0.23 (4.5s)
+[7/88] single  loops=0 recall 0.88→0.88 f1 0.32→0.32 (3.0s)
+[8/88] single  loops=0 recall 1.00→1.00 f1 0.46→0.46 (2.4s)
+[9/88] looped  loops=2 recall 0.69→0.69 f1 0.36→0.32 (9.2s)
+[10/88] single  loops=0 recall 0.75→0.75 f1 0.04→0.04 (4.0s)
+[11/88] looped  loops=2 recall 0.89→0.56 f1 0.30→0.06 (10.2s)
+[12/88] single  loops=0 recall 1.00→1.00 f1 0.38→0.38 (3.5s)
+[13/88] single  loops=0 recall 0.55→0.55 f1 0.26→0.26 (3.8s)
+[14/88] single  loops=0 recall 1.00→1.00 f1 0.64→0.64 (3.0s)
+[15/88] looped  loops=2 recall 0.78→0.78 f1 0.22→0.19 (9.3s)
+[16/88] single  loops=0 recall 0.93→0.93 f1 0.35→0.35 (5.9s)
+[17/88] single  loops=0 recall 0.94→0.94 f1 0.62→0.62 (4.3s)
+[18/88] single  loops=0 recall 1.00→1.00 f1 0.39→0.39 (4.2s)
+[19/88] looped  loops=2 recall 1.00→0.44 f1 0.48→0.06 (7.4s)
+[20/88] single  loops=0 recall 0.71→0.71 f1 0.05→0.05 (2.8s)
+[21/88] single  loops=0 recall 0.77→0.77 f1 0.12→0.12 (3.5s)
+[22/88] single  loops=0 recall 1.00→1.00 f1 0.51→0.51 (3.3s)
+[23/88] single  loops=0 recall 0.67→0.67 f1 0.00→0.00 (2.9s)
+[24/88] single  loops=0 recall 0.00→0.00 f1 0.00→0.00 (3.2s)
+[25/88] single  loops=0 recall 1.00→1.00 f1 0.62→0.62 (3.7s)
+[26/88] looped  loops=2 recall 0.75→0.75 f1 0.31→0.40 (6.9s)
+[27/88] looped  loops=2 recall 0.83→0.83 f1 0.23→0.15 (11.1s)
+[28/88] single  loops=0 recall 1.00→1.00 f1 0.36→0.36 (2.6s)
+[29/88] single  loops=0 recall 1.00→1.00 f1 0.62→0.62 (3.5s)
+[30/88] single  loops=0 recall 0.75→0.75 f1 0.16→0.16 (3.7s)
+[31/88] looped  loops=2 recall 0.83→0.83 f1 0.81→0.54 (5.7s)
+[32/88] single  loops=0 recall 1.00→1.00 f1 0.15→0.15 (6.0s)
+[33/88] single  loops=0 recall 0.93→0.93 f1 0.50→0.50 (3.7s)
+[34/88] single  loops=0 recall 1.00→1.00 f1 0.32→0.32 (3.3s)
+[35/88] looped  loops=2 recall 0.40→0.93 f1 0.03→0.49 (10.0s)
+[36/88] single  loops=0 recall 1.00→1.00 f1 0.65→0.65 (2.7s)
+[37/88] looped  loops=2 recall 0.83→0.83 f1 0.00→0.00 (5.0s)
+[38/88] single  loops=0 recall 1.00→1.00 f1 0.62→0.62 (2.9s)
+[39/88] looped  loops=1 recall 1.00→1.00 f1 0.31→0.26 (9.3s)
+[40/88] single  loops=0 recall 0.67→0.67 f1 0.18→0.18 (3.0s)
+[41/88] single  loops=0 recall 0.94→0.94 f1 0.51→0.51 (3.5s)
+[42/88] single  loops=0 recall 1.00→1.00 f1 0.67→0.67 (3.2s)
+[43/88] looped  loops=2 recall 0.75→0.75 f1 0.12→0.09 (8.5s)
+[44/88] single  loops=0 recall 0.82→0.82 f1 0.37→0.37 (4.5s)
+[45/88] looped  loops=1 recall 0.93→0.93 f1 0.46→0.26 (7.1s)
+[46/88] looped  loops=1 recall 1.00→1.00 f1 0.63→0.73 (5.8s)
+[47/88] single  loops=0 recall 1.00→1.00 f1 0.19→0.19 (3.1s)
+[48/88] single  loops=0 recall 0.83→0.83 f1 0.23→0.23 (2.8s)
+[49/88] looped  loops=2 recall 0.83→0.83 f1 0.11→0.12 (8.4s)
+[50/88] single  loops=0 recall 0.87→0.87 f1 0.25→0.25 (3.7s)
+[51/88] single  loops=0 recall 1.00→1.00 f1 0.44→0.44 (2.9s)
+[52/88] single  loops=0 recall 0.94→0.94 f1 0.27→0.27 (4.3s)
+[53/88] looped  loops=1 recall 1.00→1.00 f1 0.79→0.79 (6.6s)
+[54/88] single  loops=0 recall 1.00→1.00 f1 0.25→0.25 (2.8s)
+[55/88] looped  loops=2 recall 0.43→0.43 f1 0.00→0.00 (8.7s)
+[56/88] single  loops=0 recall 1.00→1.00 f1 0.21→0.21 (4.0s)
+[57/88] looped  loops=2 recall 1.00→1.00 f1 0.11→0.12 (8.2s)
+[58/88] looped  loops=1 recall 0.67→0.50 f1 0.16→0.15 (8.4s)
+[59/88] single  loops=0 recall 0.00→0.00 f1 0.00→0.00 (3.8s)
+[60/88] single  loops=0 recall 1.00→1.00 f1 0.49→0.49 (3.4s)
+[61/88] single  loops=0 recall 1.00→1.00 f1 0.35→0.35 (3.5s)
+[62/88] single  loops=0 recall 1.00→1.00 f1 0.72→0.72 (3.2s)
+[63/88] looped  loops=2 recall 0.83→0.50 f1 0.34→0.15 (7.8s)
+[64/88] single  loops=0 recall 1.00→1.00 f1 0.37→0.37 (3.1s)
+[65/88] looped  loops=2 recall 0.04→0.05 f1 0.00→0.00 (8.7s)
+[66/88] single  loops=0 recall 1.00→1.00 f1 0.33→0.33 (3.1s)
+[67/88] looped  loops=2 recall 0.33→0.33 f1 0.00→0.00 (7.8s)
+[68/88] looped  loops=2 recall 1.00→1.00 f1 0.68→0.65 (7.5s)
+[69/88] single  loops=0 recall 1.00→1.00 f1 0.47→0.47 (2.5s)
+[70/88] looped  loops=2 recall 0.70→0.90 f1 0.15→0.25 (9.8s)
+[71/88] single  loops=0 recall 0.25→0.25 f1 0.03→0.03 (4.3s)
+[72/88] single  loops=0 recall 1.00→1.00 f1 0.79→0.79 (3.3s)
+[73/88] single  loops=0 recall 0.93→0.93 f1 0.83→0.83 (2.3s)
+[74/88] looped  loops=2 recall 0.50→0.50 f1 0.11→0.08 (7.6s)
+[75/88] looped  loops=2 recall 1.00→0.54 f1 0.79→0.17 (8.0s)
+[76/88] single  loops=0 recall 1.00→1.00 f1 0.38→0.38 (2.7s)
+[77/88] single  loops=0 recall 1.00→1.00 f1 0.60→0.60 (3.4s)
+[78/88] looped  loops=2 recall 1.00→0.55 f1 0.96→0.19 (6.6s)
+[79/88] single  loops=0 recall 1.00→1.00 f1 0.50→0.50 (3.3s)
+[80/88] single  loops=0 recall 1.00→1.00 f1 0.56→0.56 (2.5s)
+[81/88] single  loops=0 recall 1.00→1.00 f1 0.61→0.61 (3.6s)
+[82/88] looped  loops=2 recall 0.64→0.50 f1 0.15→0.11 (8.9s)
+[83/88] single  loops=0 recall 1.00→1.00 f1 0.50→0.50 (2.3s)
+[84/88] single  loops=0 recall 1.00→1.00 f1 0.27→0.27 (3.0s)
+[85/88] single  loops=0 recall 0.25→0.25 f1 0.00→0.00 (3.8s)
+[86/88] single  loops=0 recall 1.00→1.00 f1 0.97→0.97 (2.7s)
+[87/88] looped  loops=2 recall 0.82→0.47 f1 0.53→0.15 (9.0s)
+[88/88] single  loops=0 recall 1.00→1.00 f1 0.10→0.10 (3.5s)
+
+# Agentic RAG (LangGraph) — loop-back evaluation
+
+QA pairs: 88  |  retrieval skipped: 0  |  single retrieval: 57  |  looped: 31 (35.2%)
+Loop counts: 0 loops=57, 1 loop=5, 2 loops=26  |  grader accepted after rewrite: 5, hit retry cap: 26
+
+| group | stage | n | context recall | answer F1 | faithfulness | gold-chunk hit |
+|---|---|---|---|---|---|---|
+| all | first_pass | 88 | 0.8481 | 0.3594 | 0.8209 | 0.7614 |
+| all | final | 88 | 0.8166 | 0.3284 | 0.8028 | 0.6818 |
+| never_looped | final | 57 | 0.882 | 0.3814 | 0.845 | 0.8421 |
+| looped | first_pass | 31 | 0.7858 | 0.3191 | 0.7765 | 0.6129 |
+| looped | final | 31 | 0.6964 | 0.2311 | 0.7251 | 0.3871 |
+
+Among looped queries (final vs first-pass):
+- context recall: improved 3, worse 10, unchanged 18
+- answer F1:      improved 7, worse 19, unchanged 5
+
+Saved: eval/agentic/path_log.jsonl, eval/agentic/metrics_table.csv, eval/agentic/summary.md

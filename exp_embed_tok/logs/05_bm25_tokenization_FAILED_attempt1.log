@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/gaurav/Desktop/rag_project/exp_embed_tok/05_bm25_tokenization.py", line 10, in <module>
+    from build_bim import tokenize as regex_tokenize  # existing tokenizer, unchanged
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'build_bim'

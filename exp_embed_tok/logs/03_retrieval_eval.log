@@ -1,0 +1,39 @@
+Loading retriever components...
+  Loading embedding model...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 19042.83it/s]
+  Loading cross-encoder reranker...
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 5331.23it/s]
+  Loading BM25 index...
+  Loading chunk records...
+Retriever ready.
+
+bge_ragfixed|dense     context_recall=0.7637  hit5_paper=0.7045  mrr5_paper=0.6167  hit5_chunk=0.6023  (1s)
+bge_ragfixed|full      context_recall=0.8481  hit5_paper=0.8295  mrr5_paper=0.7873  hit5_chunk=0.7614  (31s)
+bge|dense              context_recall=0.7368  hit5_paper=0.6705  mrr5_paper=0.5879  hit5_chunk=0.5455  (1s)
+bge|full               context_recall=0.8374  hit5_paper=0.7955  mrr5_paper=0.7532  hit5_chunk=0.7273  (30s)
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 18888.31it/s]
+minilm|dense           context_recall=0.7156  hit5_paper=0.5795  mrr5_paper=0.5155  hit5_chunk=0.4886  (1s)
+minilm|full            context_recall=0.8519  hit5_paper=0.8182  mrr5_paper=0.7684  hit5_chunk=0.7500  (28s)
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 19725.54it/s]
+e5|dense               context_recall=0.7167  hit5_paper=0.6250  mrr5_paper=0.5059  hit5_chunk=0.4773  (1s)
+e5|full                context_recall=0.8438  hit5_paper=0.8182  mrr5_paper=0.7589  hit5_chunk=0.7045  (29s)
+repro check dense: identical top-5 lists exp_bge vs rag_fixed: 80/88
+repro check full: identical top-5 lists exp_bge vs rag_fixed: 79/88
+diff minilm-bge dense context_recall  -0.0212 [-0.0794, +0.0430]
+diff minilm-bge dense hit5_paper      -0.0909 [-0.1818, +0.0000]
+diff minilm-bge dense mrr5_paper      -0.0723 [-0.1608, +0.0073]
+diff minilm-bge dense hit5_chunk      -0.0568 [-0.1591, +0.0341]
+diff minilm-bge full  context_recall  +0.0145 [-0.0058, +0.0426]
+diff minilm-bge full  hit5_paper      +0.0227 [-0.0341, +0.0795]
+diff minilm-bge full  mrr5_paper      +0.0152 [-0.0244, +0.0506]
+diff minilm-bge full  hit5_chunk      +0.0227 [-0.0227, +0.0682]
+diff e5-bge dense context_recall  -0.0202 [-0.0721, +0.0351]
+diff e5-bge dense hit5_paper      -0.0455 [-0.1250, +0.0341]
+diff e5-bge dense mrr5_paper      -0.0820 [-0.1561, -0.0042] *CI excludes 0
+diff e5-bge dense hit5_chunk      -0.0682 [-0.1591, +0.0227]
+diff e5-bge full  context_recall  +0.0064 [-0.0201, +0.0326]
+diff e5-bge full  hit5_paper      +0.0227 [-0.0227, +0.0682]
+diff e5-bge full  mrr5_paper      +0.0057 [-0.0404, +0.0481]
+diff e5-bge full  hit5_chunk      -0.0227 [-0.0795, +0.0227]
+saved out/03_retrieval_eval.json

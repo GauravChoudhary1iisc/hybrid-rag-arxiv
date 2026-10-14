@@ -1,0 +1,11 @@
+venv/
+qdrant_storage/
+src.zip
+__pycache__/
+*.pyc
+.env
+.claude/
+src/data/
+exp_embed_tok/out/
+*.npy
+*.pkl
